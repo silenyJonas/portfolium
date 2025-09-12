@@ -1,0 +1,23 @@
+<div class="component-main">
+    <div class="inner-wrp">
+        <div class="language-wrp">
+            <div class="flag-wrp" (click)="toggleLang(false)">
+                <img src="{{czFlagLink}}" alt="">
+            </div>
+            <div class="dash-wrp">
+                /
+            </div>
+            <div class="flag-wrp" (click)="toggleLang(true)">
+                <img src="{{enFlagLink}}" alt="">
+            </div>
+        </div>
+        <div class="rights-wrp">
+            &copy; {{rightsReserved}}
+        </div>
+        <div class="source-wrp">            
+            <a href="{{sourceCodeLink}}" target="_blank" >
+                {{sourceCode}}
+            </a>
+        </div>
+    </div>
+</div>

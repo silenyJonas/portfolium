@@ -1,0 +1,25 @@
+<div class="component-main">
+    <!-- Zobrazení Profilu -->
+    <app-profile-header 
+        [name]="name" 
+        [profileIconLink]="profileIconLink" 
+        [personalInfo]="personalInfo" 
+        [flagPath]="flagPath">
+    </app-profile-header>
+
+    <div class="line"></div>
+
+    
+    <!-- Zobrazení ikonových informací -->
+    <div class="info-container">
+        <div class="header">
+          {{techUseHeader}}
+        </div>
+        <div class="wrapper" *ngFor="let group of groupedInfoTexts">
+          <div class="info-wrp" *ngFor="let item of group">
+            <app-info-icon [title]="item.title" [iconPath]="item.iconPath"></app-info-icon>
+          </div>
+        </div>
+    </div>
+          
+</div>

@@ -1,0 +1,39 @@
+<div class="component-main">
+    <h3>{{projectsHeader}}</h3>
+    <div class="wrp" *ngFor="let item of projects" >
+
+        <a [href]="item.githubLink" target="_blank" class="card"> 
+
+            <div class="header">
+            {{ item.title }}
+            </div>
+
+            <div class="body">
+                <div class="info-wrp">
+                    <div class="info-text">
+                        <div>{{item.text1}}</div>
+                        <div>{{item.text2}}</div>
+                        <div>{{item.text3}}</div>
+                        <div>{{item.text4}}</div>
+                        <div>{{item.text5}}</div>
+                    </div>
+                </div>
+                
+
+                <div class="img-wrp"  [style.backgroundImage]="'url(' + item.backgroundPath + ')'">
+                    <div *ngIf="item.githubLink != ''" class="github-wrapper">
+                        <div class="github">
+                            <div class="logo">
+                                <img [src]="item.githubLogo" alt="GitHub Logo" class="github-logo">
+                            </div>
+                            <div class="text">
+                            {{ item.description}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </a>        
+    </div>
+</div>

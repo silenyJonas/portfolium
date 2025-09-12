@@ -1,0 +1,68 @@
+<div class="component-main">
+    <h3>{{workflowHeader}}</h3>
+    <div class="wrp">
+        <div class="btns-wrp">
+            <div class="circles">
+                <div class="circle-big center">
+                    <div class="circle-black-fill center">
+                        <div class="circle-small">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="line-wrp">
+                    <div class="vertical-line-1">
+                        
+                    </div>
+                </div>
+                
+                <div class="line-wrp">
+                    <div class="circle-medium">
+                    
+                    </div>
+                </div>
+                
+                <div class="line-wrp">
+                    <div class="vertical-line-2">
+    
+                    </div>
+                </div>
+                <div class="line-wrp">
+                    <div class="circle-medium">
+                    
+                    </div>
+                </div>
+                <div class="line-wrp">
+                    <div class="vertical-line-3">
+    
+                    </div>
+                </div>
+                <div class="circle-big center">
+                    <div class="circle-black-fill center">
+                        <div class="circle-small">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-wrp">
+                <div class="title-wrp"
+                     *ngFor="let item of workflow; let i = index"
+                     (click)="showDescription(i)"
+                     [class.active]="selectedIndex === i">
+                    <div class="title">
+                        {{ item.title }}
+                    </div>
+                </div>
+            </div>
+
+        <div class="description-wrp">
+            <div class="description">
+                {{ selectedDescription }}
+            </div>
+        </div>
+       
+    </div>
+    
+</div>

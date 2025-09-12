@@ -1,0 +1,10 @@
+<div class="side-bar-main">
+    <div class="items-wrapper">
+      <div *ngFor="let link of socialLinks" class="item">
+        <a [href]="link.link" target="_blank" rel="noopener noreferrer">
+          <img [src]="link.iconPath" alt="">
+        </a>
+      </div>
+    </div>
+  </div>
+  

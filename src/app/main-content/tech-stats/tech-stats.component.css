@@ -1,0 +1,33 @@
+.component-main {
+    margin: 10px;
+}
+.container-wrp{
+    display: flex;
+    justify-content: space-around;
+}
+.container{
+    width: 30%;
+    height: 250px;
+}
+.item-wrp-1{
+    padding-top: 20px;
+    font-size: 122px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: -24px;
+}
+.item-wrp-2{
+    width: 100%;
+    display: flex;
+    justify-content: center
+}
+@media (max-width: 1660px){
+    .item-wrp-1{
+        padding-top: 0px;
+    }   
+    .container{
+        height: 200px;
+        margin-top: -20px;
+    }
+}

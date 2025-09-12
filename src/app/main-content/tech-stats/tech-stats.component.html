@@ -1,0 +1,17 @@
+<div class="component-main">
+    
+    <h3>
+        {{header}}
+    </h3>
+    <div class="container-wrp">
+        <div class="container" *ngFor="let item of yearsActive">
+            <div class="item-wrp-1">
+              {{ item.number}} 
+            </div>
+            <div class="item-wrp-2">
+              {{ item.description }}
+            </div>
+          </div>
+    </div>
+</div>
+

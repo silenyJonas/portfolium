@@ -1,0 +1,41 @@
+.wrp{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 15px;
+}
+a{
+    text-decoration: none;
+    color: #d4d4d5;
+}
+.width-40px{
+    width: 40px;
+}
+.width-100p{
+    width: 100%;
+}
+.center{
+    display: flex;
+    justify-content: center;
+}
+img{
+    width: 100%;
+    height: auto;
+    padding-bottom: 5px;
+}
+.email{
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+.email .icon-wrp{
+    width: 20px;
+    height: 20px;
+    padding-right: 10px;
+}
+.email-wrp img{
+    width: 100%;
+    height: auto;
+}

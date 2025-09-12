@@ -1,0 +1,40 @@
+.side-bar-mian{
+    display: flex;
+    justify-content: center;
+}
+
+.items-wrapper{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+.item{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+.item img{
+    width: 100%;
+    height: 100%;
+}
+
+.item a{
+    height: 30px;
+}
+@media (max-width: 1660px) {
+    .items-wrapper{
+        flex-direction: row;
+    }
+    .item{
+        padding-left: 10px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .side-bar-main{
+        padding-left: 10px;
+
+    }
+}
