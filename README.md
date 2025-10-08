@@ -22,4 +22,4 @@ Vítej v mém osobním portfoliu vytvořeném v Angularu. Tento projekt prezentu
 ## Živá verze
 
 Portfolio je dostupné online:  
-[https://silenyjonas.github.io/joncl_port/](https://silenyjonas.github.io/joncl_port/)
+[https://silenyjonas.github.io/joncl_port/](https://silenyjonas.github.io/portfolium/)
