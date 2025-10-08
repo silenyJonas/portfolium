@@ -10,7 +10,7 @@ import { LanguageService } from '../../language.service';
   styleUrl: './projects.component.css'
 })
 export class ProjectsComponent implements OnInit {
-  projects: { title: string, backgroundPath: string, description: string, githubLink: string, githubLogo: string, text1: string, text2: string, text3: string,text4: string,text5: string, }[] = [];
+  projects: { title: string, backgroundPath: string, description: string, githubLink: string, githubLogo: string, text1?: string, text2?: string, text3?: string,text4?: string,text5?: string, }[] = [];
   projectsHeader: string = '';
   constructor(public languageService: LanguageService) {}
   ngOnInit(): void {
@@ -59,9 +59,9 @@ export class ProjectsComponent implements OnInit {
           text5: '• More than 8 pages',},
           {
             title: 'Simple Web Page',
-            backgroundPath: 'assets/projects-bg/rp.png',
+            backgroundPath: 'assets/projects-bg/rp_website.png',
             description: 'Web Page',
-            githubLink: 'https://www.regio-partner.cz',
+            githubLink: 'https://www.rpsw.cz',
             githubLogo: 'assets/images/internet.png',
             text1: '• Simple design',
             text2: '• Responsive design',
@@ -83,7 +83,6 @@ export class ProjectsComponent implements OnInit {
           text2: '• Dvoupanelový vzhled',
           text3: '• Základní operace se soubory',
           text4: '• Editace souborů',
-          text5: '',
         },
         {
           title: 'Nástroj pro správu databáze',
@@ -93,9 +92,9 @@ export class ProjectsComponent implements OnInit {
           githubLogo: 'assets/images/github-projects.png',
           text1: '• Konzolová Aplikace',
           text2: '• Operace s databází',
-          text3: '• Login/Logout',
-          text4: '• Vstup a výstup dat',
-          text5: '• Ovládání přes příkazový řádek',
+          text3: '• Operace s tabulkami',
+          text4: '• Autentizace',
+          text5: '• Vstup a výstup dat'
         },
         {
           title: 'Webová Stránka Školy',
@@ -110,16 +109,15 @@ export class ProjectsComponent implements OnInit {
           text5: '• Více než 8 stránek',
         },
         {
-          title: 'Jendoduchá Webová Stránka',
-          backgroundPath: 'assets/projects-bg/rp.png',
+          title: 'Firemní Webová Stránka',
+          backgroundPath: 'assets/projects-bg/rp_website.png',
           description: 'Webová stránka',
-          githubLink: 'https://www.regio-partner.cz',
+          githubLink: 'https://www.rpsw.cz',
           githubLogo: 'assets/images/internet.png',
-          text1: '• Jednoduché provedení',
-          text2: '• Responzivní design',
-          text3: '• Tabulky a tlačítka',
-          text4: '• Více než 10 záložek',
-          text5: '',
+          text1: '• Moderní desing',
+          text2: '• Autentizace',
+          text3: '• CRM + ERP',
+          text4: '• Formulář',
         }
       ];
     }

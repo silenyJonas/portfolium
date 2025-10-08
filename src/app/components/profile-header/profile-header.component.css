@@ -9,8 +9,12 @@
 .header-part-2{
     display: flex;
 }
+
 .name-inside-wrp{
     display: flex;
+}
+.onlinestatus-wrp{
+    width: 64%;
 }
 .img-wrp{
     width: 90px;

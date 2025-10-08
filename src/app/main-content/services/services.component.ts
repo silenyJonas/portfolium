@@ -13,6 +13,7 @@ export class ServicesComponent implements OnInit {
   service_1: string = '';
   service_2: string = '';
   service_3: string = '';
+  service_4: string = '';
   servicesHeader: string = '';
   constructor(public languageService: LanguageService) {}
   ngOnInit(): void {
@@ -26,11 +27,14 @@ export class ServicesComponent implements OnInit {
       this.service_1 = "Website Development";
       this.service_2 = "Web App Development";
       this.service_3 = "Desktop App Development";
+      this.service_4 = "Technical Documentation";
+      
     } else {
       this.servicesHeader = 'Služby';
       this.service_1 = "Tvorba Webových Stránek";
       this.service_2 = "Vývoj Webových Aplikací";
       this.service_3 = "Vývoj Desktopových Aplikací";
+      this.service_4 = "Technická Dokumentace";
     }
   }
 }

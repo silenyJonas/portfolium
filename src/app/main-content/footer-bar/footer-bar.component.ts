@@ -25,8 +25,8 @@ export class FooterBarComponent {
   enFlagLink : string = "assets/info-icons/united-kingdom.png";
   setText(isEnglish: boolean) {
     this.rightsReserved = isEnglish
-      ? '2023 Joncl. All rights reserved.'
-      : '2023 Joncl. Všechna práva vyhrazena.';
+      ? '2025 Joncl. All rights reserved.'
+      : '2025 Joncl. Všechna práva vyhrazena.';
     this.sourceCode = isEnglish
       ? 'Page Source Code'
       : 'Zdrojový kód stránky';

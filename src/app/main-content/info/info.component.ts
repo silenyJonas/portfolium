@@ -12,26 +12,39 @@ import { LanguageService } from '../../language.service';
 })
 export class InfoComponent implements OnInit {
   techUseHeader: string = '';
-  name: string = 'Joncl';
+  name: string = 'Jonáš Bučina';
   profileIconLink: string = 'assets/info-icons/profile.jpg';
   flagPath: string = 'assets/info-icons/czech-republic.png';
   personalInfo: { title: string, iconPath: string }[] = [];
   infoTexts: { title: string, iconPath: string }[] = [
     { title: 'C#', iconPath: 'assets/info-icons/c-sharp.png' },
-    { title: 'Python', iconPath: 'assets/info-icons/python.png' },
-    { title: 'PHP', iconPath: 'assets/info-icons/php.png' },
+     { title: 'C', iconPath: 'assets/info-icons/c.png' },
+    { title: 'C++', iconPath: 'assets/info-icons/cpp.png' },
     { title: 'TypeScript', iconPath: 'assets/info-icons/typescript.png' },
+
+
+    { title: 'JavaScript', iconPath: 'assets/info-icons/js.png' },
+    { title: 'Python', iconPath: 'assets/info-icons/python.png' },
+
+
     { title: 'HTML', iconPath: 'assets/info-icons/html.png' },
     { title: 'CSS', iconPath: 'assets/info-icons/css.png' },
-    { title: 'JavaScript', iconPath: 'assets/info-icons/js.png' },
     { title: 'ASP.NET', iconPath: 'assets/info-icons/aspnet.png' },
+  
+    { title: 'MSSQL', iconPath: 'assets/info-icons/mssql.png' },
+
     { title: 'MySQL', iconPath: 'assets/info-icons/mysql.png' },
     { title: 'Postgre', iconPath: 'assets/info-icons/postgresql.png' },
-    { title: 'MSSQL', iconPath: 'assets/info-icons/mssql.png' },
+    { title: 'PHP', iconPath: 'assets/info-icons/php.png' },
+
     { title: 'Angular', iconPath: 'assets/info-icons/angular.png' },
+    { title: 'Laravel', iconPath: 'assets/info-icons/laravel.png' },
+
     { title: 'Autocad', iconPath: 'assets/info-icons/autocad.png' },
     { title: 'Inventor', iconPath: 'assets/info-icons/inventor.png' },
+
     { title: 'Git', iconPath: 'assets/info-icons/social.png' },
+    { title: 'Docker', iconPath: 'assets/info-icons/docker.png' },
   ];
   groupedInfoTexts: any[][] = [];
   constructor(public languageService: LanguageService) {}
@@ -44,20 +57,22 @@ export class InfoComponent implements OnInit {
   private setPersonalInfo(isEnglish: boolean) {
     if (isEnglish) {
       this.personalInfo = [
-        { title: 'English & Czech', iconPath: '' },
+        { title: 'App & Web Dev', iconPath: '' },
+
+        { title: 'Cz & Eng', iconPath: '' },
         { title: 'Czech', iconPath: '' },
-        { title: 'Prague', iconPath: '' },
         { title: '21yo', iconPath: '' }
       ];
-      this.techUseHeader = 'Technologies I use:';
+      this.techUseHeader = 'Technologies I know:';
     } else {
       this.personalInfo = [
-        { title: 'Angličtina & Čestina', iconPath: '' },
+        { title: 'App & Web Dev', iconPath: '' },
+
+        { title: 'Cz & Eng', iconPath: '' },
         { title: 'Česko', iconPath: '' },
-        { title: 'Praha', iconPath: '' },
         { title: '21 let', iconPath: '' }
       ];
-      this.techUseHeader = 'Technologie, které využívám:';
+      this.techUseHeader = 'Technologie, které ovládám:';
     }
   }
   chunkArray(arr: any[], size: number): any[][] {

@@ -24,7 +24,7 @@ img{
     height: auto;
     padding-bottom: 5px;
 }
-.email{
+.email, .tel, .web{
     padding-top: 10px;
     display: flex;
     align-items: center;
@@ -36,6 +36,24 @@ img{
     padding-right: 10px;
 }
 .email-wrp img{
+    width: 100%;
+    height: auto;
+}
+.tel .icon-wrp{
+    width: 20px;
+    height: 20px;
+    padding-right: 10px;
+}
+.tel-wrp img{
+    width: 100%;
+    height: auto;
+}
+.web .icon-wrp{
+    width: 20px;
+    height: 20px;
+    padding-right: 10px;
+}
+.web-wrp img{
     width: 100%;
     height: auto;
 }

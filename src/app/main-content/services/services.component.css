@@ -47,6 +47,9 @@
 .desktopapp-wrp::before {
     background-image: url('../../../assets/services-bc/services-3.png');
 }
+.technic-wrp::before{
+    background-image: url('../../../assets/services-bc/services-4.jpg');
+}
 .overlay > * {
     position: relative;
     z-index: 1;
