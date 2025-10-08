@@ -58,7 +58,7 @@ export class ProjectsComponent implements OnInit {
           text4: '• Responsive design',
           text5: '• More than 8 pages',},
           {
-            title: 'Simple Web Page',
+            title: 'Company Web Page',
             backgroundPath: 'assets/projects-bg/rp_website.png',
             description: 'Web Page',
             githubLink: 'https://www.rpsw.cz',
@@ -68,7 +68,19 @@ export class ProjectsComponent implements OnInit {
             text3: '• Tables and buttons',
             text4: '• More than 10 tabs',
             text5: '',
-          }
+          },
+          {
+            title: 'Clicker Bot',
+            backgroundPath: 'assets/projects-bg/gge_autoclicker.png',
+            description: 'Source Code',
+            githubLink: 'https://github.com/silenyJonas/gge_clicker',
+            githubLogo: 'assets/images/github-projects.png',
+            text1: '• Console + GUI',
+            text2: '• Connected to Discord',
+            text3: '• VMWARE virtualization',
+            text4: '• Multithreading',
+          },
+
       ];
     } else {
       this.projectsHeader = 'Ukázkové projekty';
@@ -118,7 +130,18 @@ export class ProjectsComponent implements OnInit {
           text2: '• Autentizace',
           text3: '• CRM + ERP',
           text4: '• Formulář',
-        }
+        },
+        {
+          title: 'Clicker Bot',
+          backgroundPath: 'assets/projects-bg/gge_clicker.png',
+          description: 'Zdrojový Kód',
+          githubLink: 'https://github.com/silenyJonas/gge_clicker',
+          githubLogo: 'assets/images/github-projects.png',
+          text1: '• Konzole + GUI',
+          text2: '• Připojeno na Discord',
+          text3: '• VMWARE virtualizace',
+          text4: '• Multithreading',
+        },
       ];
     }
   }
