@@ -1,0 +1,26 @@
+/* --- Footer Component Styles --- */
+
+#footer {
+    padding: 1rem;
+    background-color: #1f2937; /* Tmavě šedá, stejná jako header */
+    color: #9ca3af; /* Světle šedá pro text */
+    text-align: center;
+    font-size: 0.875rem;
+    margin-top: 2rem;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.copyright {
+    margin-bottom: 0.5rem;
+}
+
+.back-to-top {
+    color: #f59e0b; /* Jantarová */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.back-to-top:hover {
+    color: #fcd34d;
+}

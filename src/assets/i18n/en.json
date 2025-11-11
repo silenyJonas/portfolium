@@ -1,0 +1,37 @@
+{
+  "header": {
+    "home": "Home",
+    "about_me": "About Me",
+    "projects_skills": "Projects & Skills",
+    "contact": "Contact",
+    "collaboration": "Collaboration"
+  },
+  "hero": {
+    "title": "Welcome to my Portfolio",
+    "subtitle": "I am a Software Developer focused on Angular."
+  },
+  "about_me": {
+    "header": "About Me",
+    "content": "Here will be a detailed text about my professional story, education, and values, translated in real-time."
+  },
+  "projects_skills": {
+    "header": "Projects & Skills",
+    "projects_title": "Projects",
+    "skills_title": "Skills (Dovednosti)",
+    "project_1": "Portfolio (This project)",
+    "project_2": "E-commerce application (Mockup)",
+    "project_3": "Database management tool"
+  },
+  "contact": {
+    "header": "Contact",
+    "content": "The best way to contact me is via email. Here will be a contact form (e.g., with simple fields: Name, Email, Message)."
+  },
+  "collaboration": {
+    "header": "Collaboration (Spolupráce)",
+    "content": "I am open to new projects and positions as an Angular developer. Contact me with your offer!"
+  },
+  "footer": {
+    "copyright": "Personal Portfolio",
+    "back_to_top": "Back to Top"
+  }
+}

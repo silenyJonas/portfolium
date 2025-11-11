@@ -1,0 +1,37 @@
+{
+  "header": {
+    "home": "Domů",
+    "about_me": "O mně",
+    "projects_skills": "Projekty & Dovednosti",
+    "contact": "Kontakt",
+    "collaboration": "Spolupráce"
+  },
+  "hero": {
+    "title": "Vítejte v mém portfoliu",
+    "subtitle": "Jsem softwarový vývojář se zaměřením na Angular."
+  },
+  "about_me": {
+    "header": "O mně",
+    "content": "Zde bude podrobný text o mém profesionálním příběhu, vzdělání a hodnotách, přeložený v reálném čase."
+  },
+  "projects_skills": {
+    "header": "Projekty & Dovednosti",
+    "projects_title": "Projekty",
+    "skills_title": "Dovednosti (Skills)",
+    "project_1": "Portfolio (Tento projekt)",
+    "project_2": "E-commerce aplikace (Mockup)",
+    "project_3": "Databázový nástroj pro správu dat"
+  },
+  "contact": {
+    "header": "Kontakt",
+    "content": "Nejlepší způsob, jak mě kontaktovat, je přes e-mail. Zde bude kontaktní formulář (např. s jednoduchými poli: Jméno, E-mail, Zpráva)."
+  },
+  "collaboration": {
+    "header": "Spolupráce (Collaboration)",
+    "content": "Jsem otevřený novým projektům a pozicím jako Angular developer. Kontaktujte mě s vaší nabídkou!"
+  },
+  "footer": {
+    "copyright": "Osobní Portfolio",
+    "back_to_top": "Zpět nahoru"
+  }
+}
