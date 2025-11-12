@@ -1,35 +1,55 @@
-<!-- header je kotva pro skok na začátek stránky -->
 <header id="header">
   <div class="header-content">
     
-    <!-- NÁZEV PORTFOLIA / LOGO -->
     <div class="logo">Jonas JB</div>
 
-    <!-- TLAČÍTKO HAMBURGER (Zobrazeno POUZE na mobilu) -->
     <button class="hamburger" (click)="toggleMenu()">
       <div class="bar"></div>
       <div class="bar"></div>
       <div class="bar"></div>
     </button>
 
-    <!-- DESKTOP NAVIGACE (Skrytá na mobilu) -->
     <nav class="desktop-nav">
-      <a href="#hero">Domů</a>
-      <a href="#about-me">O mně</a>
-      <a href="#projects-skills">Projekty & Dovednosti</a>
-      <a href="#contact">Kontakt</a>
-      <a href="#collaboration">Spolupráce</a>
+      <a href="#hero">{{home}}</a>
+      <a href="#about-me">{{about_me}}</a>
+      <a href="#projects-skills">{{projects_skills}}</a>
+      <a href="#contact">{{contact}}</a>
+      <a href="#collaboration">{{collaboration}}</a>
     </nav>
+    
+    <div class="language-switch desktop-only">
+      <span [class.active]="!isEnglish()">CZ</span>
+      <label class="switch">
+        <input 
+          type="checkbox" 
+          [checked]="isEnglish()"
+          (change)="onLanguageChange($event)">
+        <span class="slider round"></span>
+      </label>
+      <span [class.active]="isEnglish()">EN</span>
+    </div>
 
   </div>
 
-  <!-- MOBILNÍ MENU (Zobrazeno POUZE při otevření hamburgerem) -->
   <nav class="mobile-menu" [class.open]="isMobileMenuOpen()" *ngIf="isMobileMenuOpen()">
     <a href="#hero" (click)="closeMenu()">Domů</a>
     <a href="#about-me" (click)="closeMenu()">O mně</a>
     <a href="#projects-skills" (click)="closeMenu()">Projekty & Dovednosti</a>
     <a href="#contact" (click)="closeMenu()">Kontakt</a>
     <a href="#collaboration" (click)="closeMenu()">Spolupráce</a>
+    
+    <div class="language-switch mobile-only">
+        <span [class.active]="!isEnglish()">CZ</span>
+        <label class="switch">
+            <input 
+              type="checkbox" 
+              [checked]="isEnglish()"
+              (change)="onLanguageChange($event)">
+            <span class="slider round"></span>
+        </label>
+        <span [class.active]="isEnglish()">EN</span>
+    </div>
+
   </nav>
 
 </header>

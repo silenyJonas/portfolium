@@ -1,130 +1,209 @@
-/* --- Header Component Styles --- */
+/* ========================================= */
+/* ZÁKLADNÍ STYLY HEADERU */
+/* ========================================= */
 
-#header {
-    padding: 0; /* padding se přesune do inner containeru */
-    background-color: #1f2937;
-    color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: fixed; 
-    top: 0;
+header {
     width: 100%;
-    z-index: 10;
+    position: fixed; /* Typicky pro hlavičku, aby byla viditelná při scrollování */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ujistí se, že je nad ostatním obsahem */
+    background-color: white; /* Nastavte barvu pozadí */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .header-content {
-    /* Obal pro logo a navigaci */
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Rozprostření loga, navigace a přepínače */
     align-items: center;
-    padding: 1rem 1.5rem; /* Vnitřní mezery */
-    max-width: 1200px;
+    max-width: 1200px; /* Maximální šířka obsahu */
     margin: 0 auto;
+    padding: 15px 20px;
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #f59e0b; /* Jantarová */
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #333; /* Barva loga */
 }
 
-/* --- DESKTOP NAVIGACE (Standardní stav) --- */
-
-.desktop-nav {
-    display: flex;
-    gap: 1.5rem;
-}
-
+/* DESKTOP NAVIGACE */
 .desktop-nav a {
-    color: white;
     text-decoration: none;
-    padding: 0.5rem 0;
-    font-weight: 500;
-    transition: color 0.3s ease;
+    color: #555;
+    margin-left: 25px;
+    font-size: 1em;
+    transition: color 0.3s;
 }
 
 .desktop-nav a:hover {
-    color: #f59e0b;
+    color: var(--primary-color, #007bff); /* Barva při najetí myší */
 }
 
-/* --- HAMBURGER TLAČÍTKO --- */
+/* ========================================= */
+/* HAMBURGER A MOBILNÍ MENU */
+/* ========================================= */
 
 .hamburger {
     display: none; /* Standardně skryté na desktopu */
     background: none;
     border: none;
     cursor: pointer;
-    padding: 0;
-    width: 30px;
-    height: 24px;
-    position: relative;
-    z-index: 20; /* Nad mobilním menu */
-    /* Responzivní animace, aby se netransformovalo na desktopu */
-    transition: transform 0.3s ease; 
+    padding: 10px;
+    z-index: 1010;
 }
 
-.bar {
+.hamburger .bar {
     display: block;
-    width: 100%;
+    width: 25px;
     height: 3px;
-    background-color: white;
-    margin: 5px 0;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    margin: 5px auto;
+    background-color: #333;
+    transition: all 0.3s ease-in-out;
 }
-
-/* --- MOBILNÍ MENU --- */
 
 .mobile-menu {
-    display: flex;
+    display: none; /* Standardně skryté */
     flex-direction: column;
     position: absolute;
-    top: 100%; /* Pod headerem */
+    top: 100%; /* Pod hlavičkou */
     left: 0;
     width: 100%;
-    background-color: #2c3e50; /* Tmavší pozadí pro menu */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    
-    /* Animace - výchozí stav: skryté */
-    max-height: 0;
-    overflow: hidden;
-    /* Plynulý výjezd shora dolů */
-    transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out; 
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    text-align: center;
+    transform: translateY(-100%); /* Pro animaci zavřeného stavu */
+    transition: transform 0.3s ease-in-out;
 }
 
-/* Stav otevřeného menu */
 .mobile-menu.open {
-    /* Cílový stav: zobrazené */
-    max-height: 500px; /* Dostatečně velká hodnota pro plynulý výjezd */
-    padding: 1rem 0;
+    display: flex; /* Zobrazení, když je otevřené */
+    transform: translateY(0); /* Posun dolů, pro animaci otevření */
 }
 
 .mobile-menu a {
-    color: white;
     text-decoration: none;
-    padding: 0.75rem 1.5rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    transition: background-color 0.2s ease;
+    color: #333;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
 }
 
 .mobile-menu a:last-child {
     border-bottom: none;
 }
 
-.mobile-menu a:hover {
-    background-color: #34495e;
+/* ========================================= */
+/* PŘEPÍNAČ JAZYKA (LANGUAGE SWITCH) */
+/* ========================================= */
+
+.language-switch {
+    display: flex;
+    align-items: center;
+    gap: 8px; 
+    font-size: 0.9em;
+    font-weight: bold;
+    margin-left: 25px; /* Mezera od navigace */
 }
 
+.language-switch span {
+    transition: color 0.3s;
+    color: #888; 
+    cursor: default;
+    user-select: none;
+}
 
-/* --- RESPONZIVITA: MOBILNÍ ZAŘÍZENÍ (MAX-WIDTH 768PX) --- */
+.language-switch span.active {
+    color: var(--primary-color, #007bff);
+}
+
+/* Kontejner přepínače */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 44px; 
+  height: 24px; 
+}
+
+/* Skrýt standardní input checkbox */
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Styl slideru (pozadí) */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 24px;
+}
+
+/* Styl "knoflíku" na slideru */
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+/* Stav: Zaškrtnuto (přepnuto na EN) */
+input:checked + .slider {
+  background-color: var(--primary-color, #007bff);
+}
+
+/* Posun knoflíku, když je zaškrtnuto */
+input:checked + .slider:before {
+  transform: translateX(20px); 
+}
+
+/* ========================================= */
+/* RESPONSIVITA (BREAKPOINTS) */
+/* ========================================= */
 
 @media (max-width: 768px) {
-    
-    /* Na mobilu skryjeme desktop navigaci */
-    .desktop-nav {
+    /* Na mobilu skrýt desktopovou navigaci a zobrazit hamburger */
+    .desktop-nav,
+    .language-switch.desktop-only {
         display: none;
     }
-    
-    /* Na mobilu zobrazíme hamburger tlačítko */
+
     .hamburger {
         display: block;
+    }
+    
+    /* V mobilním menu zajistit zarovnání přepínače */
+    .mobile-menu .language-switch {
+        display: flex; /* Zajišťuje, že se mobilní přepínač zobrazí */
+        justify-content: center;
+        margin-top: 15px; 
+    }
+
+    /* Skrýt mobilní přepínač na desktopu (z bezpečnostních důvodů) */
+    .mobile-only {
+        display: flex; 
+    }
+}
+
+@media (min-width: 769px) {
+    /* Skrýt mobilní menu a přepínač na desktopu */
+    .mobile-menu,
+    .mobile-only {
+        display: none !important;
+    }
+    
+    .desktop-only {
+        display: flex; /* Zajišťuje, že desktopový přepínač je vidět */
     }
 }

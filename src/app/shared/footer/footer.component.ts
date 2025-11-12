@@ -38,3 +38,5 @@ export class FooterComponent implements OnInit, OnDestroy {
     this.destroy$.complete();
   }
 }
+
+//upravit prepinani jazyku
