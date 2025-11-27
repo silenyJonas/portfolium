@@ -1,51 +1,80 @@
 /* ========================================= */
-/* ZÁKLADNÍ STYLY HEADERU */
+/* ZÁKLADNÍ STYLY HEADERU - UPRAVENO PRO BLUR EFEKT */
+/* ========================================= */
+
+/* ========================================= */
+/* ZÁKLADNÍ STYLY HEADERU - UPRAVENO PRO PŘÍMÝ JS/TS BLUR EFEKT */
 /* ========================================= */
 
 header {
     width: 100%;
-    position: fixed; /* Typicky pro hlavičku, aby byla viditelná při scrollování */
+    position: fixed;
     top: 0;
     left: 0;
-    z-index: 1000; /* Ujistí se, že je nad ostatním obsahem */
-    background-color: white; /* Nastavte barvu pozadí */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    box-sizing: border-box;
+
+    /* Počáteční průhledné pozadí */
+    background-color: transparent; 
+    
+    /* Počáteční blur (0px) - Bude přepsáno v TS */
+    backdrop-filter: blur(0px); 
+    -webkit-backdrop-filter: blur(0px);
+    
+    /* Plynulý přechod (backdrop-filter není standardně animovatelný, ale necháváme 
+       pro background-color, který je dynamicky měněn v TS) */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, border-bottom 0.3s ease;
+    
+    /* Odstranění stínu a linky na průhledném pozadí */
+    box-shadow: none; 
+    border-bottom: 1px solid transparent; 
 }
 
 .header-content {
     display: flex;
-    justify-content: space-between; /* Rozprostření loga, navigace a přepínače */
+    justify-content: space-between; 
     align-items: center;
-    max-width: 1200px; /* Maximální šířka obsahu */
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 15px 20px;
+    height: 60px;
+    padding: 0 20px;
+    box-sizing: border-box; /* Přidáno */
 }
 
 .logo {
-    font-size: 1.8em;
-    font-weight: bold;
-    color: #333; /* Barva loga */
+    /* Používá clamp pro responsivní velikost (zajištění responsivity) */
+    font-size: clamp(1.5em, 4vw, 2.2em);
+    font-weight: 700;
+    color: #FFFFFF;
 }
 
-/* DESKTOP NAVIGACE */
+
+/* DESKTOP NAVIGACE - Beze Změn */
 .desktop-nav a {
     text-decoration: none;
-    color: #555;
-    margin-left: 25px;
-    font-size: 1em;
+    color: #FFFFFF;
+    margin-left: 30px; 
+    font-size: clamp(0.9em, 1.5vw, 1.05em);
     transition: color 0.3s;
+    position: relative;
+    padding: 5px 0;
 }
 
 .desktop-nav a:hover {
-    color: var(--primary-color, #007bff); /* Barva při najetí myší */
+    color: #0099FF;
 }
+
+.desktop-nav a:after {
+    content: none;
+}
+
 
 /* ========================================= */
 /* HAMBURGER A MOBILNÍ MENU */
 /* ========================================= */
 
 .hamburger {
-    display: none; /* Standardně skryté na desktopu */
+    display: none; 
     background: none;
     border: none;
     cursor: pointer;
@@ -58,39 +87,96 @@ header {
     width: 25px;
     height: 3px;
     margin: 5px auto;
-    background-color: #333;
+    background-color: #FFFFFF;
     transition: all 0.3s ease-in-out;
 }
 
-.mobile-menu {
-    display: none; /* Standardně skryté */
-    flex-direction: column;
-    position: absolute;
-    top: 100%; /* Pod hlavičkou */
-    left: 0;
-    width: 100%;
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px 0;
-    text-align: center;
-    transform: translateY(-100%); /* Pro animaci zavřeného stavu */
-    transition: transform 0.3s ease-in-out;
+/* Animace X */
+.hamburger.open .bar:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.open .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.hamburger.open .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
 }
 
+.mobile-menu {
+    
+    position: fixed; 
+    top: 0;
+    right: 0; 
+    left: auto; 
+    height: 100vh; 
+    width: 280px; 
+    max-width: 80%; 
+    padding: 60px 0 0 0; 
+
+    background-color: #121212;
+    box-shadow: -8px 0 16px rgba(0, 0, 0, 0.8); 
+    
+    flex-direction: column;
+    z-index: 1005; /* Zvýšeno, aby bylo nad backdrop (998) a headerem (1000) */
+    text-align: left; 
+    
+    /* KLÍČOVÁ ZMĚNA: Přidáno overflow pro scrollování menu */
+    overflow-y: auto;
+    box-sizing: border-box;
+    
+    /* Posun mimo obrazovku doprava */
+    transform: translateX(100%); 
+    transition: transform 0.3s ease-in-out;
+    
+    display: flex; 
+}
+
+/* Menu je otevřené a posune se na viditelnou pozici */
 .mobile-menu.open {
-    display: flex; /* Zobrazení, když je otevřené */
-    transform: translateY(0); /* Posun dolů, pro animaci otevření */
+    transform: translateX(0); 
 }
 
 .mobile-menu a {
     text-decoration: none;
-    color: #333;
-    padding: 15px 0;
-    border-bottom: 1px solid #eee;
+    color: #FFFFFF;
+    padding: 18px 25px; 
+    border-bottom: 1px solid #2A2A2A;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: clamp(1em, 5vw, 1.2em);
+}
+
+.mobile-menu a:hover {
+    background-color: rgba(42, 42, 42, 0.5); 
+    color: #0099FF;
 }
 
 .mobile-menu a:last-child {
     border-bottom: none;
+}
+
+/* ------------------------------------------- */
+/* AKTIVNÍ POZADÍ (BACKDROP) */
+/* ------------------------------------------- */
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.backdrop.active {
+    opacity: 1;
+    pointer-events: auto;
+    /* Důležité: Pokud by se stránka měla při otevření menu zablokovat,
+       bylo by nutné na <body>/<html> v TS/JS přidat overflow: hidden. 
+       To je ale mimo scope CSS. */
 }
 
 /* ========================================= */
@@ -101,23 +187,22 @@ header {
     display: flex;
     align-items: center;
     gap: 8px; 
-    font-size: 0.9em;
+    font-size: clamp(0.8em, 1.2vw, 0.9em);
     font-weight: bold;
-    margin-left: 25px; /* Mezera od navigace */
+    margin-left: 25px; 
 }
 
 .language-switch span {
     transition: color 0.3s;
-    color: #888; 
+    color: #A0A0A0; 
     cursor: default;
     user-select: none;
 }
 
 .language-switch span.active {
-    color: var(--primary-color, #007bff);
+    color: #0099FF;
 }
 
-/* Kontejner přepínače */
 .switch {
   position: relative;
   display: inline-block;
@@ -125,14 +210,12 @@ header {
   height: 24px; 
 }
 
-/* Skrýt standardní input checkbox */
 .switch input { 
   opacity: 0;
   width: 0;
   height: 0;
 }
 
-/* Styl slideru (pozadí) */
 .slider {
   position: absolute;
   cursor: pointer;
@@ -140,12 +223,11 @@ header {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: #2A2A2A; 
   transition: .4s;
   border-radius: 24px;
 }
 
-/* Styl "knoflíku" na slideru */
 .slider:before {
   position: absolute;
   content: "";
@@ -153,23 +235,22 @@ header {
   width: 16px;
   left: 4px;
   bottom: 4px;
-  background-color: white;
+  background-color: white; 
   transition: .4s;
   border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4); 
 }
 
-/* Stav: Zaškrtnuto (přepnuto na EN) */
 input:checked + .slider {
-  background-color: var(--primary-color, #007bff);
+  background-color: #0099FF;
 }
 
-/* Posun knoflíku, když je zaškrtnuto */
 input:checked + .slider:before {
   transform: translateX(20px); 
 }
 
 /* ========================================= */
-/* RESPONSIVITA (BREAKPOINTS) */
+/* RESPONSIVITA */
 /* ========================================= */
 
 @media (max-width: 768px) {
@@ -185,14 +266,20 @@ input:checked + .slider:before {
     
     /* V mobilním menu zajistit zarovnání přepínače */
     .mobile-menu .language-switch {
-        display: flex; /* Zajišťuje, že se mobilní přepínač zobrazí */
-        justify-content: center;
+        justify-content: flex-start; 
         margin-top: 15px; 
+        padding: 0 25px; 
+        margin-bottom: 5px; 
+        margin-left: 0; 
     }
 
-    /* Skrýt mobilní přepínač na desktopu (z bezpečnostních důvodů) */
     .mobile-only {
         display: flex; 
+        width: 100%;
+    }
+    
+    .header-content {
+        padding: 0 15px; 
     }
 }
 
@@ -204,6 +291,6 @@ input:checked + .slider:before {
     }
     
     .desktop-only {
-        display: flex; /* Zajišťuje, že desktopový přepínač je vidět */
+        display: flex;
     }
 }

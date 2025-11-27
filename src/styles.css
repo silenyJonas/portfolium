@@ -1,6 +1,6 @@
 /* Místo pro globální styly Angular aplikace */
 
-/* 1. DEKLARACE FONTU POPPINS (Používá .ttf soubory) */
+/* 1. DEKLARACE FONTU POPPINS - Beze Změn */
 
 /* Regular (400) */
 @font-face {
@@ -29,24 +29,19 @@
     font-display: swap;
 }
 
-/* 2. Resetování základních stylů těla */
+/* 2. Resetování základních stylů těla - Beze Změn */
 body {
-    /* Nastaví okraj body na nulu, aby se obsah roztáhl přes celou obrazovku */
     margin: 0;
-    /* Povolí plynulé animované posouvání, když uživatel klikne na interní kotvy */
     scroll-behavior: smooth;
-    
-    /* !!! NASTAVENÍ POPPINS JAKO HLAVNÍHO FONTU !!! */
+    overscroll-behavior: none;
     font-family: 'Poppins', sans-serif;
-    
-    /* Základní barva pozadí */
     background-color: #f7f7f7;
     font-size: 16px; 
-    line-height: 1.6; /* Lepší čitelnost textu */
-    color: #333; /* Základní barva textu */
+    line-height: 1.6;
+    color: #333;
 }
 
-/* 3. Estetický scrollbar (Webkit) */
+/* 3. Estetický scrollbar (Webkit) - Beze Změn */
 
 ::-webkit-scrollbar {
     width: 8px;
@@ -64,34 +59,84 @@ body {
 
 /* 4. ZÁKLADNÍ STYLY SEKCÍ A NADPISŮ */
 
-/* Základní styl pro všechny sekce */
+/* -------------------------------------------------------------------------- */
+/* ÚPRAVA ZÓNY HLAVNÍHO OBSAHU (MAIN) */
+/* -------------------------------------------------------------------------- */
+main {
+    width: 100%;
+    /* Polstrování nahoře pro fixní hlavičku (60px) */
+    padding-top: 60px; 
+}
+
+.color_white{
+    color: #fff;
+}
+.color_grey{
+    color: #ffffff80;
+}
+
+/* -------------------------------------------------------------------------- */
+/* STYLY PRO SEKCÍ */
+/* -------------------------------------------------------------------------- */
+
+/* Základní styl pro všechny sekce (aplikuje se na všechny, kromě .sticky-section) */
 section {
-    /* Zajišťuje, že obsah sekce není schovaný pod fixní hlavičkou */
-    padding-top: 100px; 
-    padding-bottom: 80px;
-    min-height: 80vh; 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
     width: 100%;
-    max-width: 1200px; /* Omezení šířky obsahu */
-    margin: 0 auto; /* Vycentrování obsahu */
+    margin: 0 auto; 
     box-sizing: border-box; 
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 60px 20px;
+    
+    /* KLÍČOVÉ: Zvýšení z-indexu pro běžné sekce, aby překryly sticky sekci */
+    /* Všechny sekce musí být v kontextu stackování, proto je dobré jim dát pozici. */
+    position: relative;
+    z-index: 20; 
+
+    margin-bottom: -40px;
+    
+    /* Vzhledem k tomu, že se budou překrývat, musí mít krycí pozadí */
+    background-color: #f7f7f7; /* Stejné jako body background, nebo jiné krycí */
+}
+
+/* -------------------------------------------------------------------------- */
+/* STYL PRO PRVNÍ SEKCI (STICKY V POZADÍ) */
+/* -------------------------------------------------------------------------- */
+
+/* Použijte třídu "sticky-section" na první sekci */
+.sticky-section {
+    position: sticky;
+    z-index: 10; 
+    /* KLÍČOVÁ ZMĚNA: Definujeme, že se má přilepit k horní hraně kontejneru main */
+    top: 0; 
+    min-height: calc(100vh);
+    /* Aplikace základního stylu pro sekce */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box; 
+    padding: 60px 20px;
+    margin-top: -60px;
+    margin-bottom: 40px;
 }
 
 /* Styly pro nadpisy H2 (použité pro názvy sekcí) */
+
+/* Styly pro nadpisy H2 (použité pro názvy sekcí) */
 h2 {
-    font-size: 2.5rem; /* Větší a výraznější */
+    font-size: 2.5rem; 
     font-weight: 700;
     color: #1f2937;
     margin-bottom: 1.5rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-    border-bottom: 3px solid #f59e0b; /* Jantarová linka pod nadpisem */
+    border-bottom: 3px solid #f59e0b;
     padding-bottom: 0.5rem;
 }
 
@@ -101,9 +146,4 @@ h3 {
     font-weight: 500;
     color: #f59e0b;
     margin-bottom: 1rem;
-}
-
-/* Kontejner pro hlavní obsah - oddělí header a footer */
-main {
-    width: 100%;
 }

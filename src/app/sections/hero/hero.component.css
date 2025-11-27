@@ -1,0 +1,19 @@
+section {
+    /* Přidání lineárního gradientu (tmavého filtru) PŘED obrázek. */
+    /* Vytvoří tmavou vrstvu s 50% průhledností. */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                      url('/assets/images/backgrounds/background.jpg');
+    
+    /* KLÍČOVÉ: Roztáhne obrázek, aby pokryl celou plochu sekce */
+    background-size: cover; 
+    
+    /* Vycentrování obrázku na pozadí */
+    background-position: center; 
+    
+    /* Zajištění, že se obrázek neopakuje */
+    background-repeat: no-repeat;
+    
+    /* Doplnění pro kontrolu, aby byl obsah čitelný */
+    color: white; 
+    padding: 20px;
+}

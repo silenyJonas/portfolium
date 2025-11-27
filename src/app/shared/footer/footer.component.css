@@ -2,13 +2,16 @@
 
 #footer {
     padding: 1rem;
-    background-color: #1f2937; /* Tmavě šedá, stejná jako header */
+    background-color: #1c1c1c;
     color: #9ca3af; /* Světle šedá pro text */
     text-align: center;
     font-size: 0.875rem;
-    margin-top: 2rem;
     box-sizing: border-box;
     width: 100%;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    position: absolute;
+    z-index: 22;
 }
 
 .copyright {
