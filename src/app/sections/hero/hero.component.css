@@ -1,19 +1,32 @@
 section {
-    /* Přidání lineárního gradientu (tmavého filtru) PŘED obrázek. */
-    /* Vytvoří tmavou vrstvu s 50% průhledností. */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-                      url('/assets/images/backgrounds/background.jpg');
-    
-    /* KLÍČOVÉ: Roztáhne obrázek, aby pokryl celou plochu sekce */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/assets/images/backgrounds/background.jpg');
     background-size: cover; 
-    
-    /* Vycentrování obrázku na pozadí */
     background-position: center; 
-    
-    /* Zajištění, že se obrázek neopakuje */
     background-repeat: no-repeat;
-    
-    /* Doplnění pro kontrolu, aby byl obsah čitelný */
-    color: white; 
     padding: 20px;
+
+    display: flex;
+    align-items: start;
+}
+.header {
+    font-size: 3rem;
+}
+.icons-wrp{
+    display: flex;
+    gap: 15px;
+}
+.h-wrp{
+    margin-top: 250px;
+
+}
+.icon{
+    background-color: #1a1a2e;
+    height: 50px;
+    width: 50px;
+    border-radius: 9999px;
+    border: 2px solid rgb(73, 29, 73);
+}
+.icon img{
+    width: 100%;
+    height: 100%;
 }
