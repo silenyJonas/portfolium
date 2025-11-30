@@ -1,5 +1,139 @@
-section{
+/* Základní styly sekce (dle tvého zadání) */
+.collaboration-section {
     background-color: #2f2f2f;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
+    
+    /* Vnitřní odsazení a globální styl textu */
+}
+
+/* Centrování obsahu */
+.content-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Styl hlavního nadpisu (stejný jako v předchozích sekcích pro jednotnost) */
+.section-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 10px;
+    position: relative;
+    display: block;
+}
+.section-title::after {
+    content: '';
+    display: block;
+    width: 70px;
+    height: 4px;
+    background-color: #6c5ce7; /* Akcentní barva */
+    margin: 15px auto 30px;
+    border-radius: 2px;
+}
+
+/* Úvodní text */
+.section-intro {
+    text-align: center;
+    font-size: 1.15rem;
+    max-width: 800px;
+    margin: 0 auto 60px;
+    color: #b0b0b0;
+}
+
+
+/* --- ČASOVÁ OSA (TIMELINE) --- */
+.collaboration-timeline {
+    position: relative;
+    padding: 20px 0;
+}
+
+/* Vertikální linka pro osu */
+.collaboration-timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%; /* Umístění linky do středu */
+    transform: translateX(-50%);
+    width: 3px;
+    height: 100%;
+    background-color: rgba(108, 92, 231, 0.4); /* Jemná akcentní linka */
+}
+
+.timeline-step {
+    display: flex;
+    margin-bottom: 60px;
+    position: relative;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* Přesunutí textu u sudých kroků doprava pro vzhled osy */
+.timeline-step:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+/* Číslo kroku (Kroužek na ose) */
+.step-number {
+    width: 50px;
+    height: 50px;
+    line-height: 50px; /* Vertikální centrování textu */
+    text-align: center;
+    border-radius: 50%;
+    background-color: #6c5ce7; /* Výrazná akcentní barva */
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.5rem;
+    z-index: 10;
+    
+    /* Umístění do středu pro mobily a jako oddělovač pro desktopy */
+    margin: 0 20px; 
+}
+
+/* Kontejner s obsahem textu */
+.step-content {
+    flex-grow: 1;
+    max-width: 400px; /* Omezení šířky textu */
+    background-color: #3f3f3f; /* Mírně světlejší karta */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-left: 5px solid #a29bfe; /* Vizuální akcent */
+}
+
+/* Nadpis kroku */
+.step-title {
+    font-size: 1.4rem;
+    color: #a29bfe;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+/* Popis kroku */
+.step-description {
+    font-size: 1rem;
+    color: #d0d0d0;
+}
+
+/* Media Query pro mobilní zobrazení: Vše zarovnat doleva */
+@media (max-width: 768px) {
+    .collaboration-timeline::before {
+        left: 20px; /* Přesunout linku doleva */
+        transform: none;
+    }
+    
+    .timeline-step {
+        flex-direction: row !important; /* Vynutit zarovnání zleva */
+        margin-left: 20px;
+    }
+    
+    .step-number {
+        position: absolute;
+        left: -50px; /* Číslo se posune k lince */
+    }
+    
+    .step-content {
+        margin-left: 30px; /* Posunutí textu, aby se vešel s číslem */
+    }
 }

@@ -1,5 +1,91 @@
-section{
-    background-color: rgb(30, 30, 30);
+/* Globální styly sekce (zachovány dle tvého zadání) */
+section {
+    background-color: rgb(30, 30, 30); /* Tmavé pozadí */
     border-radius: 40px;
-    z-index: 22;
+    z-index: 22; 
+    /* Doplňuji odsazení pro vzdušnost (pokud není v globále) */
+}
+
+.about-content {
+    max-width: 900px; 
+    margin: 0 auto;
+    /* UPRAVENO: Bílý text pro kontrast s tmavým pozadím */
+    color: #f0f0f0; 
+}
+
+/* --- NADPIS: Dělený a Podtržený (Moderní tmavý styl) --- */
+.section-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-align: center;
+    /* UPRAVENO: Světlá barva nadpisu */
+    color: #ffffff; 
+    margin-bottom: 40px;
+    position: relative;
+    display: block;
+    /* Přidání jemného text-shadow pro hloubku */
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4); 
+}
+
+/* Stylový podtržení/oddělovač pod nadpisem */
+.section-title::after {
+    content: '';
+    display: block;
+    width: 70px; /* Mírně rozšířeno */
+    height: 4px;
+    background-color: #6c5ce7; /* Akcentní barva */
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+/* ----------------------------------------------- */
+
+/* Styly pro odstavce s popisem */
+.about-text {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+/* Zvýraznění klíčových slov */
+.highlight {
+    font-weight: bold;
+    color: #a29bfe; /* Mírně světlejší fialová akcentní barva pro text */
+}
+
+/* Styl pro závěrečný, zdůrazněný odstavec */
+.about-text.emphasis {
+    font-style: italic;
+    /* UPRAVENO: Světlejší šedá barva pro detail */
+    color: #b0b0b0; 
+    margin-top: 35px;
+    padding-top: 15px;
+    /* UPRAVENO: Jemný světlejší oddělovač */
+    border-top: 1px solid rgba(255, 255, 255, 0.1); 
+}
+
+/* Styly pro CTA kontejner a tlačítko */
+.cta-wrapper {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 35px;
+    background-color: #6c5ce7; /* Hlavní akcentní barva */
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    /* UPRAVENO: Jemnější a "zářívější" stín na tmavém pozadí */
+    box-shadow: 0 6px 15px rgba(108, 92, 231, 0.4); 
+}
+
+.cta-button:hover {
+    background-color: #a29bfe;
+    transform: translateY(-3px); /* Větší posun při najetí */
+    /* UPRAVENO: Výraznější stín při najetí */
+    box-shadow: 0 10px 20px rgba(162, 155, 254, 0.3);
 }

@@ -1,32 +1,76 @@
-section {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/assets/images/backgrounds/background.jpg');
+/* Základní styly pro sekci */
+.hero-section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/assets/images/backgrounds/background.jpg');
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat;
+    /* Zvětšil jsem výšku, aby sekce zabírala celou obrazovku pro lepší "wow" efekt */
+    min-height: 100vh; 
     padding: 20px;
 
+    /* Nastavení flexboxu pro vertikální centrování obsahu */
     display: flex;
-    align-items: start;
+    align-items: center; /* Vertikálně vycentruje obsah */
+    justify-content: flex-start; /* Obsah zarovná doleva */
 }
-.header {
-    font-size: 3rem;
+
+/* Kontejner pro veškerý obsah (text + ikony) */
+.content-wrapper {
+    max-width: 800px; /* Omezí šířku textu pro lepší čitelnost */
+    padding-left: 5%; /* Odsazení od levého okraje */
+    color: #ffffff; /* Bílý text pro kontrast s tmavým pozadím */
 }
-.icons-wrp{
+
+/* Styly pro hlavní nadpis */
+.hero-heading {
+    font-size: 4.5rem; /* Větší a výraznější nadpis */
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: 1.5px; /* Lehké roztažení pro moderní vzhled */
+}
+
+/* Styly pro popisek/tagline */
+.hero-tagline {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 25px;
+    color: #b3b3b3; /* Šedivější barva pro menší důležitost než nadpis */
+}
+
+/* Styly pro popis o dovednostech */
+.hero-description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    max-width: 650px; /* Omezení šířky popisu */
+}
+
+/* Styly pro ikony */
+.icons-wrapper {
     display: flex;
     gap: 15px;
 }
-.h-wrp{
-    margin-top: 250px;
 
-}
-.icon{
-    background-color: #1a1a2e;
+.icon {
+    /* Mírná změna barvy a stínu pro profesionálnější vzhled */
+    background-color: rgba(26, 26, 46, 0.8); /* Mírně průhledná */
     height: 50px;
     width: 50px;
-    border-radius: 9999px;
-    border: 2px solid rgb(73, 29, 73);
+    border-radius: 50%;
+    border: 2px solid #6c5ce7; /* Výraznější, profesionální fialová/modrá */
+    display: flex; /* Pro vycentrování obrázku ikony */
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, border-color 0.3s ease;
 }
-.icon img{
-    width: 100%;
-    height: 100%;
+
+.icon:hover {
+    transform: translateY(-5px); /* Efekt při najetí */
+    border-color: #a29bfe; /* Světlejší barva při najetí */
+}
+
+.icon img {
+    width: 60%; /* Zmenšil jsem obrázek, aby se vešel dovnitř s polstrováním */
+    height: 60%;
+    object-fit: contain;
 }

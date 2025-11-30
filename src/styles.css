@@ -91,7 +91,6 @@ section {
     position: relative;
     z-index: 20; 
     margin-bottom: -40px;
-    background-color: #f7f7f7; /* Stejné jako body background, nebo jiné krycí */
 }
 
 /* -------------------------------------------------------------------------- */
