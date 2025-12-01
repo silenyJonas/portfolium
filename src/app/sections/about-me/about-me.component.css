@@ -1,16 +1,17 @@
-/* Globální styly sekce (zachovány dle tvého zadání) */
+/* Globální styly sekce */
 section {
     background-color: rgb(30, 30, 30); /* Tmavé pozadí */
     border-radius: 40px;
     z-index: 22; 
-    /* Doplňuji odsazení pro vzdušnost (pokud není v globále) */
+    padding-top: 60px; 
+    padding-bottom: 60px; 
 }
 
 .about-content {
     max-width: 900px; 
     margin: 0 auto;
-    /* UPRAVENO: Bílý text pro kontrast s tmavým pozadím */
     color: #f0f0f0; 
+    padding: 0 20px; 
 }
 
 /* --- NADPIS: Dělený a Podtržený (Moderní tmavý styl) --- */
@@ -18,12 +19,10 @@ section {
     font-size: 2.8rem;
     font-weight: 700;
     text-align: center;
-    /* UPRAVENO: Světlá barva nadpisu */
     color: #ffffff; 
     margin-bottom: 40px;
     position: relative;
     display: block;
-    /* Přidání jemného text-shadow pro hloubku */
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4); 
 }
 
@@ -31,9 +30,9 @@ section {
 .section-title::after {
     content: '';
     display: block;
-    width: 70px; /* Mírně rozšířeno */
+    width: 70px; 
     height: 4px;
-    background-color: #6c5ce7; /* Akcentní barva */
+    background-color: #6c5ce7; /* Akcentní barva (Fialová) */
     margin: 15px auto 0;
     border-radius: 2px;
 }
@@ -49,43 +48,206 @@ section {
 /* Zvýraznění klíčových slov */
 .highlight {
     font-weight: bold;
-    color: #a29bfe; /* Mírně světlejší fialová akcentní barva pro text */
+    color: #a29bfe; /* Světlejší fialová akcentní barva pro text */
 }
 
-/* Styl pro závěrečný, zdůrazněný odstavec */
+/* Styl pro závěrečný, zdůrazněný odstavec (pokud by byl použit) */
 .about-text.emphasis {
     font-style: italic;
-    /* UPRAVENO: Světlejší šedá barva pro detail */
     color: #b0b0b0; 
     margin-top: 35px;
     padding-top: 15px;
-    /* UPRAVENO: Jemný světlejší oddělovač */
     border-top: 1px solid rgba(255, 255, 255, 0.1); 
 }
 
-/* Styly pro CTA kontejner a tlačítko */
-.cta-wrapper {
-    text-align: center;
+/* --- CENTROVANÁ ČASOVÁ OSA --- */
+
+.current-status-and-links {
     margin-top: 50px;
+    padding-top: 30px;
+    text-align: center; 
 }
 
-.cta-button {
-    display: inline-block;
-    padding: 12px 35px;
-    background-color: #6c5ce7; /* Hlavní akcentní barva */
-    color: #ffffff;
+/* Tlačítko/odkaz na stažení životopisu (UPRAVENO PRO MINIMALISMUS) */
+.cv-download-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 15px; /* Menší padding */
+    margin-top: 40px; /* Větší mezera po timeline */
+    
+    /* Vzhled: Nyní jen text s akcentem */
+    background-color: transparent; /* Průhledné pozadí */
+    color: #a29bfe; /* Akcentní barva pro text */
     text-decoration: none;
-    border-radius: 8px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-    /* UPRAVENO: Jemnější a "zářívější" stín na tmavém pozadí */
-    box-shadow: 0 6px 15px rgba(108, 92, 231, 0.4); 
+    border: 1px solid #6c5ce7; /* Tenký rámeček pro definici */
+    border-radius: 6px; 
+    font-weight: 500; /* Lehčí font */
+    font-size: 1rem;
+    transition: all 0.3s ease; /* Plynulejší přechod */
+    box-shadow: none; /* Odstraněn stín */
 }
 
-.cta-button:hover {
-    background-color: #a29bfe;
-    transform: translateY(-3px); /* Větší posun při najetí */
-    /* UPRAVENO: Výraznější stín při najetí */
-    box-shadow: 0 10px 20px rgba(162, 155, 254, 0.3);
+.cv-download-link i {
+    margin-right: 8px; /* Menší mezera */
+    font-size: 1rem;
+    color: #6c5ce7; /* Ikona akcentní barvou */
+}
+
+.cv-download-link:hover {
+    background-color: #6c5ce7; /* Při najetí se pozadí vyplní */
+    color: #ffffff; /* Text zbělá */
+    transform: none; /* Odstraněn posun */
+    box-shadow: 0 4px 10px rgba(108, 92, 231, 0.2); /* Jemný stín při najetí */
+}
+
+.cv-download-link:hover i {
+    color: #ffffff; /* Ikona zbělá */
+}
+
+/* Nadpis pro sekci praxe */
+.experience-heading {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #a29bfe;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* Kontejner pro pracovní praxi */
+.working-status-wrapper {
+    max-width: 900px; 
+    margin: 0 auto;
+    text-align: center; 
+    padding-bottom: 20px;
+}
+
+/* Styl pro vlastní časovou osu (seznam) */
+.experience-timeline {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+/* Vizuální linka časové osy - Nyní je přesně uprostřed UL */
+.experience-timeline::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    bottom: 0;
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 2px;
+    background-color: rgba(108, 92, 231, 0.5); 
+}
+
+/* Jednotlivé položky na ose */
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px; 
+    padding: 0; 
+    clear: both; 
+}
+
+/* Tečka/ikona na ose - Nyní je uprostřed */
+.timeline-dot {
+    position: absolute;
+    left: 50%; 
+    transform: translateX(-50%); 
+    top: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #6c5ce7; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    box-shadow: 0 0 0 5px rgb(30, 30, 30); 
+    z-index: 10;
+}
+
+.timeline-dot i {
+    font-size: 0.9rem;
+}
+
+/* Obsah položky (kontejnery pro text) */
+.timeline-content {
+    display: flex;
+    flex-direction: column;
+    padding: 10px; 
+    border-radius: 8px;
+    width: 45%; 
+    text-align: right; 
+}
+
+
+/* STYLY PRO LICHÉ POLOŽKY (vlevo) */
+.timeline-item:nth-child(odd) .timeline-content {
+    float: left; 
+    transform: translateX(-20px); 
+}
+/* STYLY PRO SUDÉ POLOŽKY (vpravo) */
+.timeline-item:nth-child(even) .timeline-content {
+    float: right; 
+    text-align: left; 
+    transform: translateX(20px); 
+}
+
+
+.timeline-date {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #a29bfe; 
+    margin-bottom: 3px;
+}
+
+.timeline-company {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 2px;
+}
+
+.timeline-role {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #b0b0b0;
+}
+
+
+/* --- RESPONZIVITA PRO CENTROVANOU OSU --- */
+@media (max-width: 800px) {
+    /* Na menších obrazovkách se vracíme k levému zarovnání pro lepší čitelnost */
+    .working-status-wrapper {
+        max-width: 100%;
+    }
+    .experience-timeline::before {
+        left: 15px; 
+        transform: translateX(0);
+    }
+    
+    .timeline-item {
+        padding-left: 50px; 
+        padding-right: 0;
+    }
+    
+    .timeline-dot {
+        left: 0;
+        transform: translateX(0);
+    }
+    
+    .timeline-content {
+        width: auto; 
+        float: none !important; 
+        text-align: left !important;
+        transform: translateX(0) !important;
+    }
+
+    /* Zrušení všech float stylů pro responzivitu */
+    .timeline-item:nth-child(odd) .timeline-content,
+    .timeline-item:nth-child(even) .timeline-content {
+        float: none !important;
+        text-align: left !important;
+    }
 }

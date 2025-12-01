@@ -36,7 +36,6 @@ export class HeaderComponent implements OnInit {
   isScrolled = signal(false);
 
   // Proměnné pro překlady (načítané ze LocalizationService)
-  home: string = ""
   about_me: string = ""
   projects_skills: string = ""
   contact: string = ""
@@ -64,7 +63,6 @@ export class HeaderComponent implements OnInit {
           .pipe(takeUntil(this.destroy$))
           .subscribe(translations => {
             if (translations) {
-              this.home = this.localizationService.getText('header.home');
               this.about_me = this.localizationService.getText('header.about_me');
               this.projects_skills = this.localizationService.getText('header.projects_skills');
               this.contact = this.localizationService.getText('header.contact');

@@ -3,7 +3,7 @@ section{
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px;
     z-index: 21;
-    
+    padding-bottom: 80px; 
 }
 
 
@@ -11,9 +11,10 @@ section{
 .content-wrapper {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px; 
 }
 
-/* Styl hlavního nadpisu - používám stejný styl jako v About Me pro jednotnost */
+/* Styl hlavního nadpisu */
 .section-title {
     font-size: 2.8rem;
     font-weight: 700;
@@ -23,14 +24,15 @@ section{
     position: relative;
     display: block;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4); 
+    padding-top: 60px; 
 }
 .section-title::after {
     content: '';
     display: block;
     width: 70px;
     height: 4px;
-    background-color: #6c5ce7; /* Akcentní barva */
-    margin: 15px auto 30px; /* Větší mezera po lince */
+    background-color: #6c5ce7; 
+    margin: 15px auto 30px; 
     border-radius: 2px;
 }
 
@@ -44,62 +46,119 @@ section{
 }
 
 
-/* --- SEZNAM DOVEDNOSTÍ (SUMMARY) --- */
-.skills-heading, .projects-heading {
+/* --- STYL PRO SEKCÍ DOVEDNOSTÍ (UPRAVENO) --- */
+
+.skills-heading {
+    font-size: 1.6rem; 
+    font-weight: 600;
+    color: #a29bfe; 
+    margin-top: 20px; 
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.projects-heading {
     font-size: 2rem;
     font-weight: 600;
-    color: #a29bfe; /* Použití akcentní barvy */
-    margin-top: 50px;
+    color: #a29bfe; 
+    margin-top: 70px; 
     margin-bottom: 30px;
     text-align: center;
 }
 
-.skills-list {
-    list-style: none;
-    padding: 0;
+/* NOVÝ KONTEJNER S DĚLICÍMI ČARAMI */
+.skills-container-with-dividers {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap; /* Zajistí zalomení na menších obrazovkách */
-    gap: 30px;
+    justify-content: space-between;
+    align-items: stretch; /* Klíčové pro správnou výšku čar */
+    flex-wrap: wrap; 
     margin-bottom: 50px;
 }
 
-.skill-item {
-    background-color: #1a1a2e; /* Mírně světlejší podklad pro položky */
-    padding: 15px 30px;
-    border-radius: 10px;
-    font-size: 1.1rem;
+.skills-column {
+    flex: 1; 
+    min-width: 300px; 
+    padding: 20px;
+    /* Odstraněno fialové pozadí */
+    /* Odstraněno box-shadow */
+}
+
+/* STYL PRO SVISLOU DĚLICÍ ČÁRU */
+.skills-divider {
+    width: 2px; 
+    min-height: 100%; 
+    background: linear-gradient(
+        to bottom, 
+        rgba(108, 92, 231, 0) 0%, 
+        rgba(108, 92, 231, 0.8) 50%, 
+        rgba(108, 92, 231, 0) 100% 
+    );
+    margin: 20px 20px; /* Odsazení od obsahu sloupců */
+}
+
+.tech-icons-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 15px;
+    padding: 0;
+}
+
+.tech-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 5px;
+    background-color: #22222a; /* Tmavé pozadí pro lepší čitelnost na tmavém pozadí sekce */
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 0.95rem;
     font-weight: 500;
-    transition: background-color 0.3s;
+    color: #d0d0d0;
+    height: 100px; 
+    border: 1px solid #333333; /* Jemný rámeček */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.skill-icon {
-    margin-right: 10px;
-    font-size: 1.3rem;
+.tech-item:hover {
+    background-color: #31313d;
+    transform: translateY(-2px);
+    border-color: #6c5ce7;
+}
+
+.tech-item .tech-icon-img {
+    width: 40px; 
+    height: 40px; 
+    object-fit: contain; 
+    margin-bottom: 5px;
+}
+
+.tech-item span {
+    margin-top: 5px;
 }
 
 
-/* --- PROJEKTY (GRID KARTY) --- */
+/* --- STYLY PROJEKTŮ --- */
+
 .projects-grid {
     display: grid;
-    /* 3 sloupce na velkém monitoru, 1 na malém */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 40px;
     padding-top: 20px;
 }
 
 .project-card {
-    background-color: #1a1a2e; /* Tmavá karta */
+    background-color: #1a1a2e; 
     border-radius: 15px;
     padding: 30px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
-    border: 1px solid rgba(108, 92, 231, 0.15); /* Jemný rámeček */
+    border: 1px solid rgba(108, 92, 231, 0.15); 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
-    transform: translateY(-5px); /* Vizuální efekt při najetí */
-    box-shadow: 0 15px 30px rgba(108, 92, 231, 0.3); /* Mírné "záření" */
+    transform: translateY(-5px); 
+    box-shadow: 0 15px 30px rgba(108, 92, 231, 0.3); 
 }
 
 .project-title {
@@ -120,7 +179,7 @@ section{
 .project-tech {
     font-size: 0.9rem;
     font-style: italic;
-    color: #6c5ce7; /* Akcentní barva pro technologie */
+    color: #6c5ce7; 
     margin-bottom: 25px;
 }
 
@@ -149,7 +208,7 @@ section{
 }
 
 .github-link {
-    background-color: #333; /* Tmavě šedá pro GitHub */
+    background-color: #333; 
     color: #ffffff;
     border: 1px solid #6c5ce7;
 }
@@ -162,4 +221,29 @@ section{
 .full-width {
     flex-grow: 1; 
     text-align: center;
+}
+
+/* --- RESPONZIVITA --- */
+
+@media (max-width: 1050px) {
+    /* U menších obrazovek se zruší dělicí čáry */
+    .skills-container-with-dividers {
+        justify-content: center;
+        gap: 30px; /* Znovu nastavíme gap */
+    }
+    
+    .skills-divider {
+        display: none;
+    }
+
+    .skills-column {
+        flex-basis: 45%; 
+    }
+}
+
+@media (max-width: 768px) {
+    .skills-column {
+        min-width: 100%;
+        flex-basis: 100%;
+    }
 }

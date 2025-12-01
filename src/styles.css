@@ -122,7 +122,6 @@ h2 {
     margin-bottom: 1.5rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-    border-bottom: 3px solid #f59e0b;
     padding-bottom: 0.5rem;
 }
 
@@ -130,6 +129,5 @@ h2 {
 h3 {
     font-size: 1.5rem;
     font-weight: 500;
-    color: #f59e0b;
     margin-bottom: 1rem;
 }
