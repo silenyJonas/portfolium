@@ -4,73 +4,268 @@
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat;
-    /* Zvětšil jsem výšku, aby sekce zabírala celou obrazovku pro lepší "wow" efekt */
     min-height: 100vh; 
     padding: 20px;
 
     /* Nastavení flexboxu pro vertikální centrování obsahu */
     display: flex;
     align-items: center; /* Vertikálně vycentruje obsah */
-    justify-content: flex-start; /* Obsah zarovná doleva */
+    justify-content: flex-start; 
 }
 
 /* Kontejner pro veškerý obsah (text + ikony) */
 .content-wrapper {
-    max-width: 800px; /* Omezí šířku textu pro lepší čitelnost */
-    padding-left: 5%; /* Odsazení od levého okraje */
-    color: #ffffff; /* Bílý text pro kontrast s tmavým pozadím */
+    max-width: 800px;
+    padding-left: 5%; 
+    color: #ffffff; 
 }
+
+/* -------------------------------------- */
+/* --- ÚPRAVY TEXTU A VZHLEDU --- */
+/* -------------------------------------- */
 
 /* Styly pro hlavní nadpis */
 .hero-heading {
-    font-size: 4.5rem; /* Větší a výraznější nadpis */
-    font-weight: 700;
-    margin-bottom: 10px;
-    letter-spacing: 1.5px; /* Lehké roztažení pro moderní vzhled */
+    font-size: 5.5rem; 
+    font-weight: 900; 
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(108, 92, 231, 0.8), 
+                 0 0 20px rgba(108, 92, 231, 0.4);
+    line-height: 1.1;
 }
 
 /* Styly pro popisek/tagline */
 .hero-tagline {
-    font-size: 1.8rem;
-    font-weight: 400;
-    margin-bottom: 25px;
-    color: #b3b3b3; /* Šedivější barva pro menší důležitost než nadpis */
+    font-size: 2rem; 
+    font-weight: 300; 
+    margin-bottom: 30px; 
+    color: #a29bfe; 
+    position: relative;
+    padding-left: 30px; 
+}
+
+/* Dekorativní prvek před tagline */
+.hero-tagline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px; 
+    height: 3px;
+    background-color: #a29bfe;
+    border-radius: 2px;
 }
 
 /* Styly pro popis o dovednostech */
 .hero-description {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    margin-bottom: 40px;
-    max-width: 650px; /* Omezení šířky popisu */
+    font-size: 1.15rem; 
+    line-height: 1.7;
+    margin-bottom: 50px; 
+    max-width: 650px; 
+    color: #d0d0d0; 
+    border-left: 3px solid #6c5ce7; 
+    padding-left: 20px;
 }
 
 /* Styly pro ikony */
 .icons-wrapper {
     display: flex;
-    gap: 15px;
+    gap: 20px; 
 }
 
 .icon {
-    /* Mírná změna barvy a stínu pro profesionálnější vzhled */
-    background-color: rgba(26, 26, 46, 0.8); /* Mírně průhledná */
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    border: 2px solid #6c5ce7; /* Výraznější, profesionální fialová/modrá */
-    display: flex; /* Pro vycentrování obrázku ikony */
+    background-color: rgba(26, 26, 46, 0.85); 
+    height: 55px; 
+    width: 55px;
+    border-radius: 12px; 
+    border: none; 
+    box-shadow: 0 0 15px rgba(108, 92, 231, 0.4); 
+    display: flex; 
     justify-content: center;
     align-items: center;
-    transition: transform 0.3s ease, border-color 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
 .icon:hover {
-    transform: translateY(-5px); /* Efekt při najetí */
-    border-color: #a29bfe; /* Světlejší barva při najetí */
+    transform: scale(1.05); 
+    background-color: #6c5ce7; 
+    box-shadow: 0 0 25px rgba(108, 92, 231, 1); 
 }
 
 .icon img {
-    width: 60%; /* Zmenšil jsem obrázek, aby se vešel dovnitř s polstrováním */
-    height: 60%;
-    object-fit: contain;
+    width: 65%; 
+    height: 65%;
+}
+
+/* -------------------------------------- */
+/* --- RESPONZIVITA --- */
+/* -------------------------------------- */
+
+/* Pro tablety a menší desktopy (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .content-wrapper {
+        padding-left: 3%; /* Mírně menší odsazení */
+    }
+
+    .hero-heading {
+        font-size: 4.5rem; /* Zmenšení nadpisu */
+    }
+
+    .hero-tagline {
+        font-size: 1.7rem; /* Zmenšení tagline */
+    }
+    
+    .hero-description {
+        font-size: 1.1rem; /* Mírné zmenšení popisu */
+    }
+}
+
+/* Pro telefony a menší tablety (max-width: 768px) */
+@media (max-width: 768px) {
+    .hero-section {
+        /* Centrujeme obsah i na mobilech, protože je méně místa */
+        justify-content: center;
+        text-align: center;
+    }
+
+    .content-wrapper {
+        max-width: 90%;
+        padding-left: 0; /* Zrušení levého odsazení pro centrování */
+    }
+
+    .text-content {
+        /* Aby byl text uprostřed, i když je content-wrapper max-width */
+        margin: 0 auto;
+    }
+
+    .hero-heading {
+        font-size: 3rem; /* Výrazné zmenšení pro mobily */
+        letter-spacing: 1px;
+        line-height: 1.2;
+    }
+
+    .hero-tagline {
+        font-size: 1.3rem; 
+        margin-bottom: 20px;
+        padding-left: 0; /* Zrušení odsazení */
+        display: block;
+    }
+    
+    /* Zrušení dekorativní čáry v tagline pro mobily */
+    .hero-tagline::before {
+        content: none;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+        padding-left: 15px;
+        margin-bottom: 30px;
+        text-align: left; /* Ponecháme zarovnání doleva pro lepší čitelnost textu v bloku */
+    }
+
+    .icons-wrapper {
+        justify-content: center; /* Centrování ikon */
+        gap: 15px;
+    }
+    
+    .icon {
+        height: 45px;
+        width: 45px;
+    }
+}
+
+/* Pro velmi malé telefony (max-width: 480px) */
+@media (max-width: 480px) {
+    .hero-heading {
+        font-size: 2.5rem; 
+    }
+    .hero-tagline {
+        font-size: 1.1rem;
+    }
+}
+/* ... (předchozí styly) ... */
+
+/* -------------------------------------- */
+/* --- ÚPRAVY TEXTU A VZHLEDU --- */
+/* -------------------------------------- */
+
+/* NOVÝ STYL PRO JMÉNO JONÁŠ */
+.hero-name {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 0;
+    color: #a29bfe; /* Použijeme akcentní barvu */
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    opacity: 0.8; /* Mírná průhlednost, aby nekonkuroval H1 */
+}
+
+/* Styly pro hlavní nadpis - upraveno, aby bylo "SOFTWARE DEVELOPER" */
+.hero-heading {
+    /* Mírné zmenšení, aby se text vešel na menší obrazovky */
+    font-size: 5rem; 
+    font-weight: 900; 
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+    color: #ffffff;
+    /* Ponecháme stejný stín */
+    text-shadow: 0 0 10px rgba(108, 92, 231, 0.8), 
+                 0 0 20px rgba(108, 92, 231, 0.4);
+    line-height: 1.1;
+    text-transform: uppercase; /* Zajištění velkých písmen, jak bylo požadováno */
+}
+
+/* Styly pro popisek/tagline */
+/* ... (zbytek zůstává stejný) ... */
+
+/* -------------------------------------- */
+/* --- RESPONZIVITA --- */
+/* -------------------------------------- */
+
+/* Pro tablety a menší desktopy (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .content-wrapper {
+        padding-left: 3%;
+    }
+
+    .hero-name {
+        font-size: 1.3rem; /* Zmenšení jména */
+    }
+
+    .hero-heading {
+        font-size: 4rem; /* Zmenšení nadpisu */
+    }
+
+    /* ... (zbytek zůstává stejný) ... */
+}
+
+/* Pro telefony a menší tablety (max-width: 768px) */
+@media (max-width: 768px) {
+    /* ... (předchozí styly pro centrování) ... */
+    
+    .hero-name {
+        font-size: 1.1rem; /* Zmenšení jména pro mobil */
+        letter-spacing: 3px;
+    }
+
+    .hero-heading {
+        font-size: 2.5rem; /* Výrazné zmenšení pro mobily */
+        letter-spacing: 1px;
+        line-height: 1.2;
+    }
+
+    /* ... (zbytek zůstává stejný) ... */
+}
+
+/* Pro velmi malé telefony (max-width: 480px) */
+@media (max-width: 480px) {
+    .hero-heading {
+        font-size: 2rem; 
+    }
+    .hero-tagline {
+        font-size: 1.1rem;
+    }
 }

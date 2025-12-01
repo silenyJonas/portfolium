@@ -79,8 +79,6 @@ section{
     flex: 1; 
     min-width: 300px; 
     padding: 20px;
-    /* Odstraněno fialové pozadí */
-    /* Odstraněno box-shadow */
 }
 
 /* STYL PRO SVISLOU DĚLICÍ ČÁRU */
@@ -154,11 +152,11 @@ section{
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
     border: 1px solid rgba(108, 92, 231, 0.15); 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-5px); 
-    box-shadow: 0 15px 30px rgba(108, 92, 231, 0.3); 
+    
+    /* ZAROVNÁNÍ OBSAHU DOLŮ (NOVÉ STYLY) */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Klíčové pro odtlačení .project-tech a .project-links dolů */
 }
 
 .project-title {
@@ -169,11 +167,13 @@ section{
     padding-bottom: 10px;
 }
 
+/* Využijeme flex-grow na popisu, aby zabral veškerý volný prostor */
 .project-description {
     font-size: 1rem;
     color: #d0d0d0;
     margin-bottom: 15px;
     line-height: 1.6;
+    flex-grow: 1; /* Tato vlastnost zajistí, že popis se roztáhne a odtlačí spodní prvky */
 }
 
 .project-tech {
@@ -181,6 +181,7 @@ section{
     font-style: italic;
     color: #6c5ce7; 
     margin-bottom: 25px;
+    /* Dříve tam byla mezera, která se teď řeší flexboxem */
 }
 
 .project-links {
@@ -201,6 +202,8 @@ section{
 .live-link {
     background-color: #6c5ce7;
     color: #ffffff;
+    flex-grow: 1;
+    text-align: center;
 }
 
 .live-link:hover {
