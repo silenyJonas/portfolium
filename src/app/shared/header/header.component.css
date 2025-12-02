@@ -1,8 +1,4 @@
 /* ========================================= */
-/* ZÁKLADNÍ STYLY HEADERU - UPRAVENO PRO BLUR EFEKT */
-/* ========================================= */
-
-/* ========================================= */
 /* ZÁKLADNÍ STYLY HEADERU - UPRAVENO PRO PŘÍMÝ JS/TS BLUR EFEKT */
 /* ========================================= */
 
@@ -21,8 +17,7 @@ header {
     backdrop-filter: blur(0px); 
     -webkit-backdrop-filter: blur(0px);
     
-    /* Plynulý přechod (backdrop-filter není standardně animovatelný, ale necháváme 
-       pro background-color, který je dynamicky měněn v TS) */
+    /* Plynulý přechod */
     transition: background-color 0.3s ease, box-shadow 0.3s ease, border-bottom 0.3s ease;
     
     /* Odstranění stínu a linky na průhledném pozadí */
@@ -38,18 +33,17 @@ header {
     margin: 0 auto;
     height: 60px;
     padding: 0 20px;
-    box-sizing: border-box; /* Přidáno */
+    box-sizing: border-box; 
 }
 
 .logo {
-    /* Používá clamp pro responsivní velikost (zajištění responsivity) */
     font-size: clamp(1.5em, 4vw, 2.2em);
     font-weight: 700;
     color: #FFFFFF;
 }
 
 
-/* DESKTOP NAVIGACE - Beze Změn */
+/* DESKTOP NAVIGACE */
 .desktop-nav a {
     text-decoration: none;
     color: #FFFFFF;
@@ -61,7 +55,8 @@ header {
 }
 
 .desktop-nav a:hover {
-    color: #0099FF;
+    /* FIALOVÁ ZMĚNA: Původní: #0099FF */
+    color: #6c5ce7; 
 }
 
 .desktop-nav a:after {
@@ -113,18 +108,17 @@ header {
     max-width: 80%; 
     padding: 60px 0 0 0; 
 
-    background-color: #121212;
+    /* FIALOVÁ ZMĚNA: Mírně fialovější tmavé pozadí */
+    background-color: #1a1a2e;
     box-shadow: -8px 0 16px rgba(0, 0, 0, 0.8); 
     
     flex-direction: column;
-    z-index: 1005; /* Zvýšeno, aby bylo nad backdrop (998) a headerem (1000) */
+    z-index: 1005; 
     text-align: left; 
     
-    /* KLÍČOVÁ ZMĚNA: Přidáno overflow pro scrollování menu */
     overflow-y: auto;
     box-sizing: border-box;
     
-    /* Posun mimo obrazovku doprava */
     transform: translateX(100%); 
     transition: transform 0.3s ease-in-out;
     
@@ -140,14 +134,17 @@ header {
     text-decoration: none;
     color: #FFFFFF;
     padding: 18px 25px; 
-    border-bottom: 1px solid #2A2A2A;
+    /* FIALOVÁ ZMĚNA: Tmavší oddělovač, ale v kontextu fialové */
+    border-bottom: 1px solid #2a2a44; 
     transition: background-color 0.3s, color 0.3s;
     font-size: clamp(1em, 5vw, 1.2em);
 }
 
 .mobile-menu a:hover {
-    background-color: rgba(42, 42, 42, 0.5); 
-    color: #0099FF;
+    /* FIALOVÁ ZMĚNA: Lehce fialový hover efekt */
+    background-color: rgba(108, 92, 231, 0.15); 
+    /* FIALOVÁ ZMĚNA: Původní: #0099FF */
+    color: #a29bfe; 
 }
 
 .mobile-menu a:last-child {
@@ -174,9 +171,6 @@ header {
 .backdrop.active {
     opacity: 1;
     pointer-events: auto;
-    /* Důležité: Pokud by se stránka měla při otevření menu zablokovat,
-       bylo by nutné na <body>/<html> v TS/JS přidat overflow: hidden. 
-       To je ale mimo scope CSS. */
 }
 
 /* ========================================= */
@@ -194,13 +188,15 @@ header {
 
 .language-switch span {
     transition: color 0.3s;
-    color: #A0A0A0; 
+    /* FIALOVÁ ZMĚNA: Šedá, ale ladící s fialovou */
+    color: #b0b0d6; 
     cursor: default;
     user-select: none;
 }
 
 .language-switch span.active {
-    color: #0099FF;
+    /* FIALOVÁ ZMĚNA: Původní: #0099FF */
+    color: #a29bfe;
 }
 
 .switch {
@@ -223,7 +219,8 @@ header {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #2A2A2A; 
+  /* FIALOVÁ ZMĚNA: Tmavší, fialovější pozadí */
+  background-color: #2a2a44; 
   transition: .4s;
   border-radius: 24px;
 }
@@ -242,7 +239,8 @@ header {
 }
 
 input:checked + .slider {
-  background-color: #0099FF;
+    /* FIALOVÁ ZMĚNA: Původní: #0099FF */
+    background-color: #6c5ce7;
 }
 
 input:checked + .slider:before {

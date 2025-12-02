@@ -1,9 +1,10 @@
 /* Základní styly sekce (dle tvého zadání) */
 .contact-section {
-    background-color: rgb(30, 30, 30);
-    /* Vnitřní odsazení a globální styl textu */
+    /* VELMI TMAVÉ POZADÍ SEKCE (blízko černé, ale s mírným nádechem) */
+    background-color: #121212; 
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
+    padding: 80px 20px; 
 }
 
 /* Centrování obsahu */
@@ -12,7 +13,7 @@
     margin: 0 auto;
 }
 
-/* Styl hlavního nadpisu (stejný jako v předchozích sekcích pro jednotnost) */
+/* Styl hlavního nadpisu (beze změny) */
 .section-title {
     font-size: 2.8rem;
     font-weight: 700;
@@ -27,12 +28,12 @@
     display: block;
     width: 70px;
     height: 4px;
-    background-color: #6c5ce7; /* Akcentní barva */
+    background-color: #6c5ce7; /* Fialová akcentní barva */
     margin: 15px auto 30px;
     border-radius: 2px;
 }
 
-/* Úvodní text */
+/* Úvodní text (beze změny) */
 .section-intro {
     text-align: center;
     font-size: 1.15rem;
@@ -43,12 +44,6 @@
 
 
 /* --- STYLY FORMULÁŘE --- */
-.contact-form {
-    background-color: #1a1a2e; /* Tmavší, akcentní barva pozadí formuláře */
-    padding: 35px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-}
 
 .form-group {
     margin-bottom: 25px;
@@ -58,29 +53,32 @@
     display: block;
     margin-bottom: 8px;
     font-weight: 600;
-    color: #a29bfe; /* Akcentní barva pro popisky */
+    color: #a29bfe; /* Fialová akcentní barva pro popisky */
     font-size: 1rem;
 }
 
 .form-input {
     width: 100%;
     padding: 15px;
-    background-color: #2f2f2f; /* Tmavé pozadí pole */
-    color: #f0f0f0; /* Světlý text */
-    border: 1px solid #444;
+    /* VSTUPNÍ POLE: Mírně světlejší než pozadí sekce pro kontrast */
+    background-color: #1a1a1a; 
+    color: #f0f0f0;
+    /* Tmavý, jemný rámeček */
+    border: 1px solid #333; 
     border-radius: 8px;
     font-size: 1rem;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    box-sizing: border-box; /* Zajištění správné šířky s paddingem */
+    box-sizing: border-box;
 }
 
 .form-input:focus {
+    /* Fialový focus a glow efekt - beze změny */
     border-color: #6c5ce7;
     box-shadow: 0 0 8px rgba(108, 92, 231, 0.6);
     outline: none;
 }
 
-/* Styly pro placeholder text (moderní detail) */
+/* Styly pro placeholder text */
 .form-input::placeholder {
     color: #888;
 }
@@ -94,10 +92,10 @@
 
 .form-group-split .form-group {
     flex: 1;
-    margin-bottom: 0; /* Zde již není potřeba mezera */
+    margin-bottom: 0;
 }
 
-/* Styl tlačítka pro odeslání */
+/* Styl tlačítka pro odeslání (beze změny) */
 .submit-button {
     display: flex;
     align-items: center;
@@ -140,7 +138,7 @@
 }
 
 .quick-link {
-    color: #a29bfe;
+    color: #a29bfe; /* Fialový akcent */
     text-decoration: none;
     font-weight: 500;
     transition: color 0.2s ease;

@@ -1,19 +1,21 @@
 /* Základní styly sekce (dle tvého zadání) */
 .collaboration-section {
-    background-color: #2f2f2f;
+    /* SVĚTLEJŠÍ POZADÍ SEKCE */
+    background-color: #242424; 
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
-    
-    /* Vnitřní odsazení a globální styl textu */
+    padding: 80px 0;
+    margin-bottom: -85px;
 }
 
 /* Centrování obsahu */
 .content-wrapper {
     max-width: 1000px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
-/* Styl hlavního nadpisu (stejný jako v předchozích sekcích pro jednotnost) */
+/* Styl hlavního nadpisu */
 .section-title {
     font-size: 2.8rem;
     font-weight: 700;
@@ -22,13 +24,15 @@
     margin-bottom: 10px;
     position: relative;
     display: block;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4); 
 }
 .section-title::after {
     content: '';
     display: block;
     width: 70px;
     height: 4px;
-    background-color: #6c5ce7; /* Akcentní barva */
+    /* Fialová akcentní linka - beze změny */
+    background-color: #6c5ce7; 
     margin: 15px auto 30px;
     border-radius: 2px;
 }
@@ -46,7 +50,7 @@
 /* --- ČASOVÁ OSA (TIMELINE) --- */
 .collaboration-timeline {
     position: relative;
-    padding: 20px 0;
+    padding-bottom: 20px;
 }
 
 /* Vertikální linka pro osu */
@@ -54,11 +58,12 @@
     content: '';
     position: absolute;
     top: 0;
-    left: 50%; /* Umístění linky do středu */
+    left: 50%;
     transform: translateX(-50%);
     width: 3px;
     height: 100%;
-    background-color: rgba(108, 92, 231, 0.4); /* Jemná akcentní linka */
+    /* Fialová svislá čára - beze změny */
+    background-color: rgba(108, 92, 231, 0.6); 
 }
 
 .timeline-step {
@@ -69,7 +74,6 @@
     padding: 0 20px;
 }
 
-/* Přesunutí textu u sudých kroků doprava pro vzhled osy */
 .timeline-step:nth-child(even) {
     flex-direction: row-reverse;
 }
@@ -78,33 +82,39 @@
 .step-number {
     width: 50px;
     height: 50px;
-    line-height: 50px; /* Vertikální centrování textu */
+    line-height: 50px;
     text-align: center;
     border-radius: 50%;
-    background-color: #6c5ce7; /* Výrazná akcentní barva */
+    /* Fialový kruh - beze změny */
+    background-color: #6c5ce7; 
+    box-shadow: 0 0 10px rgba(108, 92, 231, 0.5); 
     color: #ffffff;
     font-weight: 700;
     font-size: 1.5rem;
     z-index: 10;
     
-    /* Umístění do středu pro mobily a jako oddělovač pro desktopy */
     margin: 0 20px; 
 }
 
 /* Kontejner s obsahem textu */
 .step-content {
     flex-grow: 1;
-    max-width: 400px; /* Omezení šířky textu */
-    background-color: #3f3f3f; /* Mírně světlejší karta */
+    max-width: 400px; 
+    /* SVĚTLEJŠÍ VÝPLŇ RÁMEČKU */
+    background-color: #1a1a1a; 
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    border-left: 5px solid #a29bfe; /* Vizuální akcent */
+    /* Upravený stín, aby lépe vynikl na světlejším pozadí */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7); 
+    /* Fialová linka na boku - beze změny */
+    border-left: 5px solid #a29bfe; 
+    transition: transform 0.3s ease;
 }
 
 /* Nadpis kroku */
 .step-title {
     font-size: 1.4rem;
+    /* Fialová barva nadpisu - beze změny */
     color: #a29bfe;
     margin-top: 0;
     margin-bottom: 10px;
@@ -119,21 +129,24 @@
 /* Media Query pro mobilní zobrazení: Vše zarovnat doleva */
 @media (max-width: 768px) {
     .collaboration-timeline::before {
-        left: 20px; /* Přesunout linku doleva */
+        left: 20px;
         transform: none;
     }
     
     .timeline-step {
-        flex-direction: row !important; /* Vynutit zarovnání zleva */
+        flex-direction: row !important;
         margin-left: 20px;
     }
     
     .step-number {
         position: absolute;
-        left: -50px; /* Číslo se posune k lince */
+        left: 20px;
+        margin: 0;
+        transform: translateX(-50%);
     }
     
     .step-content {
-        margin-left: 30px; /* Posunutí textu, aby se vešel s číslem */
+        margin-left: 45px;
+        max-width: 100%;
     }
 }

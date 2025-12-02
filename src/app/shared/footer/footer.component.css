@@ -1,29 +1,81 @@
 /* --- Footer Component Styles --- */
 
 #footer {
-    padding: 1rem;
-    background-color: #1c1c1c;
+    padding: 1.5rem 1rem; /* Mírně zvětšený padding */
+    /* Pozadí ponecháno tmavě šedé, ale ladící s #1a1a1a */
+    background-color: #1a1a1a; 
     color: #9ca3af; /* Světle šedá pro text */
     text-align: center;
-    font-size: 0.875rem;
+    font-size: 0.9rem; /* Mírně zvětšený font */
     box-sizing: border-box;
     width: 100%;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
-    position: absolute;
+    /* Ponecháno pro relativní pozicování */
+    position: relative; 
     z-index: 22;
 }
 
-.copyright {
-    margin-bottom: 0.5rem;
+.footer-content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.back-to-top {
-    color: #f59e0b; /* Jantarová */
+.copyright {
+    margin-bottom: 0.8rem;
+    font-weight: 400;
+}
+
+.footer-nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-link {
+    /* FIALOVÁ ZMĚNA: Použití světlejší fialové akcentní barvy */
+    color: #a29bfe; 
     text-decoration: none;
     transition: color 0.3s ease;
+    font-weight: 500;
 }
 
-.back-to-top:hover {
-    color: #fcd34d;
+.footer-link:hover {
+    /* FIALOVÁ ZMĚNA: Barva při hoveru */
+    color: #ffffff; 
+}
+
+.separator {
+    color: #444;
+}
+
+.github-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    vertical-align: middle;
+    /* Můžete zvážit použití SVG/Font ikony, pokud chcete, aby byla barevně ladící */
+}
+
+/* --- Responzivita pro menší obrazovky --- */
+@media (max-width: 600px) {
+    .footer-content-wrapper {
+        align-items: center;
+    }
+
+    .footer-nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .separator {
+        display: none; /* Skryjeme oddělovač na mobilech */
+    }
+    
+    .copyright {
+        order: 2; /* Přesuneme copyright pod odkazy na mobilu */
+    }
 }
