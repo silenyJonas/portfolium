@@ -6,6 +6,9 @@ section{
     padding-bottom: 80px; 
 }
 
+a {
+    text-decoration: none;
+}
 
 /* Centrování obsahu */
 .content-wrapper {

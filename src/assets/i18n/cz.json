@@ -6,12 +6,37 @@
     "collaboration": "Spolupráce"
   },
   "hero": {
-    "title": "Vítejte v mém portfoliu",
-    "subtitle": "Jsem softwarový vývojář se zaměřením na Angular."
+    "name": "JONÁŠ BUČINA",
+    "title": "SOFTWARE DEVELOPER",
+    "subtitle": "Fullstack Web & Desktop Specialista",
+    "capture": "Specializuji se na tvorbu <strong>robustních a škálovatelných řešení</strong> napříč platformami. Mám zkušenosti s <strong>fullstack webovým vývojem</strong> (od databáze po moderní UI) i s návrhem a implementací <strong>výkonných desktopových aplikací</strong> v C# a C/C++. Mým cílem je vždy čistý, udržitelný a optimalizovaný kód."
   },
   "about_me": {
-    "header": "O mně",
-    "content": "Zde bude podrobný text o mém profesionálním příběhu, vzdělání a hodnotách, přeložený v reálném čase."
+    "header": "Kdo jsem & co dělám",
+    "paragraph_1": "Jsem <strong>Fullstack software developer</strong> s širokým záběrem, který kombinuje robustní backend s moderním frontendem. Můj stack zahrnuje jak pokročilé webové technologie (<strong>Angular, Laravel, JavaScript/TypeScript</strong>), tak i výkonnostní nástroje jako <strong>Python, C# a C/C++</strong>.",
+    "paragraph_2": "Specializuji se na <strong>návrh a implementaci</strong> efektivních řešení s důrazem na principy <strong>OOP (Objektově Orientované Programování)</strong> a <strong>čistou architekturu</strong>. Mým cílem je dodávat <strong>udržitelný kód</strong>, který je spolehlivý, dobře testovaný a snadno rozšiřitelný i v komplexních prostředích (např. <span class='highlight'>architektura mikroslužeb</span>).",
+    "header_praxe": "Pracovní praxe",
+    "htec": {
+      "year": "2025 – Nyní",
+      "name": "High Tech Engineering Center, a.s.",
+      "pos": "Software Engineer, Medical Solutions"
+    },
+    "rp": {
+      "year": "2022 – nyní",
+      "name": "RegioPartner, s.r.o.",
+      "pos": "Expert, Full Stack Web Developer"
+    },
+    "viagem": {
+      "year": "2024 - 2024",
+      "name": "Viagem, a.s.",
+      "pos": "CRM Developer"
+    },
+    "naucseto": {
+      "year": "2023 - 2024",
+      "name": "NAUCSETO, s.r.o",
+      "pos": "Lektor kroužku programování"
+    },
+    "download_label": "Stáhnout Můj Životopis (PDF)"
   },
   "projects_skills": {
     "header": "Projekty & Dovednosti",

@@ -1,13 +1,11 @@
 <section id="hero" class="sticky-section hero-section">
   <div class="content-wrapper">
     <div class="text-content">
-      <p class="hero-name">JONÁŠ BUČINA</p>
+      <p class="hero-name" [innerHTML]="name"></p>
       
-      <h1 class="hero-heading">SOFTWARE DEVELOPER</h1>
-      <p class="hero-tagline">Fullstack Web & Desktop Specialist</p>
-      <p class="hero-description">
-        Specializuji se na tvorbu <strong>robustních a škálovatelných řešení</strong> napříč platformami. Mám zkušenosti s <strong>fullstack webovým vývojem</strong> (od databáze po moderní UI) i s návrhem a implementací <strong>výkonných desktopových aplikací</strong> v C# a C/C++. Mým cílem je vždy čistý, udržitelný a optimalizovaný kód.
-      </p>
+      <h1 class="hero-heading" [innerHTML]="title"></h1>
+      <p class="hero-tagline" [innerHTML]="subtitle"></p>
+      <p class="hero-description" [innerHTML]="capture"></p>
     </div>
     
     <div class="icons-wrapper">

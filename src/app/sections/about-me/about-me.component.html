@@ -1,61 +1,59 @@
 <section id="about-me" class="about-section light-theme">
   <div class="about-content">
     
-    <h2 class="section-title">Kdo jsem & co dělám</h2>
+    <h2 class="section-title" [innerHTML]="header"></h2>
     
     <div class="about-text-wrapper">
-        <p class="about-text">
-            Jsem <strong>Fullstack software developer</strong> s širokým záběrem, který kombinuje robustní backend s moderním frontendem. 
-            Můj stack zahrnuje jak pokročilé webové technologie (<strong>Angular, Laravel, JavaScript/TypeScript</strong>), tak i výkonnostní nástroje jako <strong>Python, C# a C/C++</strong>.
+        <p class="about-text" [innerHTML]="paragraph_1">          
         </p>
-        <p class="about-text">
-            Specializuji se na <strong>návrh a implementaci</strong> efektivních řešení s důrazem na principy <strong>OOP (Objektově Orientované Programování)</strong> a <strong>čistou architekturu</strong>. Mým cílem je dodávat <strong>udržitelný kód</strong>, který je spolehlivý, dobře testovaný a snadno rozšiřitelný i v komplexních prostředích (např. <span class="highlight">architektura mikroslužeb</span>).
+        <p class="about-text" [innerHTML]="paragraph_2">
+           
         </p>
     </div>
 
     <div class="current-status-and-links">
         <div class="working-status-wrapper">
-            <h3 class="experience-heading">Pracovní praxe</h3>
+            <h3 class="experience-heading" [innerHTML]="header_praxe"></h3>
             <ul class="experience-timeline">
                 <li class="timeline-item">
                     <div class="timeline-dot"><i class="fas fa-briefcase"></i></div>
                     <div class="timeline-content">
-                        <span class="timeline-date">2025 – Nyní</span>
-                        <span class="timeline-company">High Tech Engineering Center, a.s.</span>
-                        <span class="timeline-role">Software Engineer, Medical Solutions</span>
+                        <span class="timeline-date" [innerHTML]="htec_year"></span>
+                        <span class="timeline-company"[innerHTML]="htec_name"></span>
+                        <span class="timeline-role"[innerHTML]="htec_pos"></span>
                     </div>
                 </li>
                 <li class="timeline-item">
                     <div class="timeline-dot"><i class="fas fa-code"></i></div>
                     <div class="timeline-content">
-                        <span class="timeline-date">2022 – nyní</span>
-                        <span class="timeline-company">RegioPartner, s.r.o.</span>
-                        <span class="timeline-role">Expert, Full Stack Web Developer</span>
+                        <span class="timeline-date"[innerHTML]="rp_year"></span>
+                        <span class="timeline-company"[innerHTML]="rp_name"></span>
+                        <span class="timeline-role"[innerHTML]="rp_pos"></span>
                     </div>
                 </li>
                 <li class="timeline-item">
                     <div class="timeline-dot"><i class="fas fa-briefcase"></i></div>
                     <div class="timeline-content">
-                        <span class="timeline-date">2024 - 2024</span>
-                        <span class="timeline-company">Viagem, a.s.</span>
-                        <span class="timeline-role">CRM Developer</span>
+                        <span class="timeline-date"[innerHTML]="viagem_year"></span>
+                        <span class="timeline-company"[innerHTML]="viagem_name"></span>
+                        <span class="timeline-role"[innerHTML]="viagem_pos"></span>
                     </div>
                 </li>
                 
                 <li class="timeline-item">
                     <div class="timeline-dot"><i class="fas fa-briefcase"></i></div>
                     <div class="timeline-content">
-                        <span class="timeline-date">2023 - 2024</span>
-                        <span class="timeline-company">NAUCSETO, s.r.o</span>
-                        <span class="timeline-role">Lektor kroužku programování</span>
+                        <span class="timeline-date"[innerHTML]="naucseto_year"></span>
+                        <span class="timeline-company"[innerHTML]="naucseto_name"></span>
+                        <span class="timeline-role"[innerHTML]="naucseto_pos"></span>
                     </div>
                 </li>
             </ul>
         </div>
         
-        <a href="/cesta-k-vasemu-cv.pdf" download class="cv-download-link">
+        <a href="/assets/files/Jonáš_Bučina_CV_public.pdf" download class="cv-download-link">
             <i class="fas fa-file-pdf"></i>
-            Stáhnout Můj Životopis (PDF)
+            <div [innerHTML]="download_label"></div>
         </a>
     </div>
     
