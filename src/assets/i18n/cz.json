@@ -39,12 +39,30 @@
     "download_label": "Stáhnout Můj Životopis (PDF)"
   },
   "projects_skills": {
-    "header": "Projekty & Dovednosti",
-    "projects_title": "Projekty",
-    "skills_title": "Dovednosti (Skills)",
-    "project_1": "Portfolio (Tento projekt)",
-    "project_2": "E-commerce aplikace (Mockup)",
-    "project_3": "Databázový nástroj pro správu dat"
+    "header": "Moje práce a technologický Stack",
+    "capture": "Zde najdete přehled technologií, se kterými pracuji, a vybrané projekty, které demonstrují mé dovednosti ve fullstack vývoji.",
+    "web_header": "Webový vývoj",
+    "desktop_header": "Desktop & Backend",
+    "db_header": "Databáze & Nástroje",
+    "selected_projects_header": "Vybrané Projekty",
+    "web_app": {
+      "header": "Komerční Webová Platforma (CRM/ERP)",
+      "text": "Robustní fullstack řešení pro firmu, zahrnující komplexní Webovou Prezentaci, Klientskou Sekci a výkonnou Administrativní Backoffice (CRM/ERP). Systém zajišťuje správu uživatelů, objednáve a interních procesů. Projekt je ukázkou komplexního webového vývoje a designu.",
+      "tech": "Tech: Angular, Laravel (API), MySQL, Bootstrap",
+      "button_label":"Navštívit Web"
+    },
+    "mc_app": {
+      "header": "Souborový Manažer pro CLI",
+      "text": "Desktopová aplikace pro příkazovou řádku (CLI) v jazyce C#, která replikuje funkcionalitu souborového manažeru typu Midnight Commander/Norton Commander. Důraz je kladen na principy objektově orientovaného programování (OOP), čistou architekturu a efektivní správu konzolového rozhraní.",
+      "tech": "Tech: C#, .NET Framework, OOP, CLI/Konzole",
+      "button_label":"GitHub Repozitář"
+    },
+    "db_app": {
+      "header": "Konzolový Databázový Nástroj (CLI)",
+      "text": "Konzolová aplikace napsaná v jazyce C# / .NET, která slouží jako robustní nástroj pro plnou správu databází (PostgreSQL). Umožňuje dynamické vytváření/úpravu tabulek, vkládání dat, spouštění dotazů a komplexní ovládání schématu databáze přímo z příkazové řádky.",
+      "tech": "Tech: C#, .NET, OOP, PostgreSQL, Konzole/CLI, Dapper (ORM)",
+      "button_label":"GitHub Repozitář"
+    }
   },
   "contact": {
     "header": "Kontakt",

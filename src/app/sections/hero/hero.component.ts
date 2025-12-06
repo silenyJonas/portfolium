@@ -38,4 +38,8 @@ export class HeroComponent {
               }
             });
     }
+    ngOnDestroy() {
+        this.destroy$.next();
+        this.destroy$.complete();
+    }
 }

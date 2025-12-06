@@ -68,4 +68,8 @@ export class AboutMeComponent {
               }
             });
     }
+    ngOnDestroy() {
+        this.destroy$.next();
+        this.destroy$.complete();
+    }
 }

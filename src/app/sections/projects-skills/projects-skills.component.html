@@ -1,15 +1,13 @@
 <section id="projects-skills" class="projects-skills-section">
   <div class="content-wrapper">
     
-    <h2 class="section-title">Moje práce a technologický Stack</h2>
-    <p class="section-intro">
-      Zde najdete přehled technologií, se kterými pracuji, a vybrané projekty, které demonstrují mé dovednosti ve fullstack vývoji.
-    </p>
+    <h2 class="section-title" [innerHTML]="header"></h2>
+    <p class="section-intro" [innerHTML]="capture">
 
     <div class="skills-container-with-dividers"> 
         
         <div class="skills-column">
-            <h3 class="skills-heading">Web Development</h3>
+            <h3 class="skills-heading" [innerHTML]="web_header"></h3>
             <div class="tech-icons-grid">
                 <a href="https://angular.io/docs" target="_blank" class="tech-item">
                     <img src="assets/images/tech-icons/angular.png" alt="Angular Logo" class="tech-icon-img"> 
@@ -33,7 +31,7 @@
         <div class="skills-divider"></div> 
 
         <div class="skills-column">
-            <h3 class="skills-heading">Desktop & Backend</h3>
+            <h3 class="skills-heading" [innerHTML]="desktop_header"></h3>
             <div class="tech-icons-grid">
                 <a href="https://learn.microsoft.com/en-us/dotnet/csharp/" target="_blank" class="tech-item">
                     <img src="assets/images/tech-icons/csharp.png" alt="C# Logo" class="tech-icon-img"> 
@@ -57,7 +55,7 @@
         <div class="skills-divider"></div> 
 
         <div class="skills-column">
-            <h3 class="skills-heading">Databáze & Nástroje</h3>
+            <h3 class="skills-heading" [innerHTML]="db_header"></h3>
             <div class="tech-icons-grid">
                 <a href="https://dev.mysql.com/doc/" target="_blank" class="tech-item">
                     <img src="assets/images/tech-icons/mysql.png" alt="MySQL Logo" class="tech-icon-img"> 
@@ -79,46 +77,45 @@
         </div>
     </div> 
     
-    <h3 class="projects-heading">Vybrané Projekty</h3>
+    <h3 class="projects-heading" [innerHTML]="selected_projects_header"></h3>
     <div class="projects-grid">
       
      <div class="project-card">
-        <h4 class="project-title">Komerční Webová Platforma (CRM/ERP)</h4>
-        <p class="project-description">
-          Robustní fullstack řešení pro firmu, zahrnující komplexní <strong>Webovou Prezentaci</strong>, <strong>Klientskou Sekci</strong> a výkonnou <strong>Administrativní Backoffice (CRM/ERP)</strong>. Systém zajišťuje správu uživatelů, objednáve a interních procesů. <strong>Projekt je ukázkou komplexního webového vývoje a designu.</strong>
+        <h4 class="project-title" [innerHTML]="web_app_header"></h4>
+        <p class="project-description" [innerHTML]="web_app_text">
         </p>
-        <p class="project-tech">Tech: Angular, Laravel (API), MySQL, Bootstrap</p>
+        <p class="project-tech" [innerHTML]="web_app_tech"></p>
         <div class="project-links">
-          <a href="https://www.rpsw.cz" target="_blank" class="link-button live-link">
-            Navštívit Web
+          <a href="https://www.rpsw.cz" target="_blank" class="link-button live-link" [innerHTML]="web_app_button">
+            
           </a>
         
         </div>
       </div>
 
       <div class="project-card">
-        <h4 class="project-title">Souborový Manažer pro CLI</h4>
-        <p class="project-description">
-          Desktopová aplikace pro příkazovou řádku (CLI) v jazyce <strong>C#</strong>, která replikuje funkcionalitu souborového manažeru typu Midnight Commander/Norton Commander. <strong>Důraz je kladen na principy objektově orientovaného programování (OOP)</strong>, čistou architekturu a efektivní správu konzolového rozhraní.
+        <h4 class="project-title" [innerHTML]="mc_app_header"></h4>
+        <p class="project-description" [innerHTML]="mc_app_text">
+         
         </p>
-        <p class="project-tech">Tech: C#, .NET Framework, OOP, CLI/Konzole</p>
+        <p class="project-tech" [innerHTML]="mc_app_tech"></p>
         <div class="project-links">
           <a href="https://github.com/silenyJonas/file_manager" target="_blank" class="link-button github-link full-width">
-            <span class="icon-text">GitHub Repozitář</span>
+            <span class="icon-text" [innerHTML]="mc_app_button"></span>
           </a>
         </div>
       </div>
     
 
       <div class="project-card">
-          <h4 class="project-title">Konzolový Databázový Nástroj (CLI)</h4>
-          <p class="project-description">
-            Konzolová aplikace napsaná v jazyce <strong>C# / .NET</strong>, která slouží jako robustní nástroj pro plnou správu databází (PostgreSQL). Umožňuje <strong>dynamické vytváření/úpravu tabulek</strong>, vkládání dat, spouštění dotazů a komplexní <strong>ovládání schématu databáze přímo z příkazové řádky</strong>.
+          <h4 class="project-title" [innerHTML]="db_app_header"></h4>
+          <p class="project-description" [innerHTML]="db_app_text">
+           
           </p>
-          <p class="project-tech">Tech: C#, .NET, OOP, PostgreSQL, Konzole/CLI, Dapper (ORM)</p>
+          <p class="project-tech" [innerHTML]="db_app_tech"></p>
           <div class="project-links">
             <a href="https://github.com/silenyJonas/database_api" target="_blank" class="link-button github-link full-width">
-              <span class="icon-text">GitHub Repozitář</span>
+              <span class="icon-text" [innerHTML]="db_app_button"></span>
             </a>
           </div>
       </div>
