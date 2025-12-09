@@ -1,16 +1,17 @@
 /* Základní styly pro sekci */
+/* Základní styly pro sekci */
 .hero-section {
+    /*
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/assets/images/backgrounds/background.jpg');
-    background-size: cover; 
-    background-position: center; 
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
-    min-height: 100vh; 
+    */
+    min-height: 100vh;
     padding: 20px;
-
-    /* Nastavení flexboxu pro vertikální centrování obsahu */
     display: flex;
-    align-items: center; /* Vertikálně vycentruje obsah */
-    justify-content: flex-start; 
+    align-items: center;
+    justify-content: flex-start;
 }
 
 /* Kontejner pro veškerý obsah (text + ikony) */
