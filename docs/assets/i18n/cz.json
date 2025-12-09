@@ -1,0 +1,108 @@
+{
+  "header": {
+    "about_me": "O mně",
+    "projects_skills": "Projekty & Dovednosti",
+    "contact": "Kontakt",
+    "collaboration": "Spolupráce"
+  },
+  "hero": {
+    "name": "JONÁŠ BUČINA",
+    "title": "SOFTWARE VÝVOJÁŘ",
+    "subtitle": "Fullstack Web & Desktop Specialista",
+    "capture": "Specializuji se na tvorbu <strong>robustních a škálovatelných řešení</strong> napříč platformami. Mám zkušenosti s <strong>fullstack webovým vývojem</strong> (od databáze po moderní UI) i s návrhem a implementací <strong>výkonných desktopových aplikací</strong> v C# a C/C++. Mým cílem je vždy čistý, udržitelný a optimalizovaný kód."
+  },
+  "about_me": {
+    "header": "Kdo jsem & co dělám",
+    "paragraph_1": "Jsem <strong>Fullstack software developer</strong> s širokým záběrem, který kombinuje robustní backend s moderním frontendem. Můj stack zahrnuje jak pokročilé webové technologie (<strong>Angular, Laravel, JavaScript/TypeScript</strong>), tak i výkonnostní nástroje jako <strong>Python, C# a C/C++</strong>.",
+    "paragraph_2": "Specializuji se na <strong>návrh a implementaci</strong> efektivních řešení s důrazem na principy <strong>OOP (Objektově Orientované Programování)</strong> a <strong>čistou architekturu</strong>. Mým cílem je dodávat <strong>udržitelný kód</strong>, který je spolehlivý, dobře testovaný a snadno rozšiřitelný i v komplexních prostředích (např. <span class='highlight'>architektura mikroslužeb</span>).",
+    "header_praxe": "Pracovní praxe",
+    "htec": {
+      "year": "2025 – Nyní",
+      "name": "High Tech Engineering Center, a.s.",
+      "pos": "Software Engineer, Medical Solutions"
+    },
+    "rp": {
+      "year": "2022 – nyní",
+      "name": "RegioPartner, s.r.o.",
+      "pos": "Expert, Full Stack Web Developer"
+    },
+    "viagem": {
+      "year": "2024 - 2024",
+      "name": "Viagem, a.s.",
+      "pos": "CRM Developer"
+    },
+    "naucseto": {
+      "year": "2023 - 2024",
+      "name": "NAUCSETO, s.r.o",
+      "pos": "Lektor kroužku programování"
+    },
+    "download_label": "Stáhnout Můj Životopis (PDF)"
+  },
+  "projects_skills": {
+    "header": "Moje práce a technologický Stack",
+    "capture": "Zde najdete přehled technologií, se kterými pracuji, a vybrané projekty, které demonstrují mé dovednosti ve fullstack vývoji.",
+    "web_header": "Webový vývoj",
+    "desktop_header": "Desktop & Backend",
+    "db_header": "Databáze & Nástroje",
+    "selected_projects_header": "Vybrané Projekty",
+    "web_app": {
+      "header": "Komerční Webová Platforma (CRM/ERP)",
+      "text": "Robustní fullstack řešení pro firmu, zahrnující komplexní Webovou Prezentaci, Klientskou Sekci a výkonnou Administrativní Backoffice (CRM/ERP). Systém zajišťuje správu uživatelů, objednáve a interních procesů. Projekt je ukázkou komplexního webového vývoje a designu.",
+      "tech": "Tech: Angular, Laravel (API), MySQL, Bootstrap",
+      "button_label":"Navštívit Web"
+    },
+    "mc_app": {
+      "header": "Souborový Manažer pro CLI",
+      "text": "Desktopová aplikace pro příkazovou řádku (CLI) v jazyce C#, která replikuje funkcionalitu souborového manažeru typu Midnight Commander/Norton Commander. Důraz je kladen na principy objektově orientovaného programování (OOP), čistou architekturu a efektivní správu konzolového rozhraní.",
+      "tech": "Tech: C#, .NET Framework, OOP, CLI/Konzole",
+      "button_label":"GitHub Repozitář"
+    },
+    "db_app": {
+      "header": "Konzolový Databázový Nástroj (CLI)",
+      "text": "Konzolová aplikace napsaná v jazyce C# / .NET, která slouží jako robustní nástroj pro plnou správu databází (PostgreSQL). Umožňuje dynamické vytváření/úpravu tabulek, vkládání dat, spouštění dotazů a komplexní ovládání schématu databáze přímo z příkazové řádky.",
+      "tech": "Tech: C#, .NET, OOP, PostgreSQL, Konzole/CLI, Dapper (ORM)",
+      "button_label":"GitHub Repozitář"
+    }
+  },
+  "contact": {
+    "header": "Pojďme se spojit",
+    "content": "Máte projekt, o kterém byste rádi diskutovali, nebo jen chcete pozdravit? Neváhejte mě kontaktovat.",
+    "form":{
+      "name_header":"Jméno",
+      "name_text":"Vaše jméno",
+      "email_header":"Email",
+      "email_text":"vas@email.cz",
+      "topic_header":"Předmět (nepovinné)",
+      "topic_text":"Téma zprávy",
+      "message_header":"Vaše zpráva",
+      "message_text":"Popište Váš projekt nebo dotaz."
+    },
+    "button_label": "Odeslat Zprávu",
+    "location": "Nebo mě najdete přímo na:"
+  },
+  "collaboration": {
+    "header": "Spolupráce",
+    "content": "Jsem Váš jediný partner pro celý projekt. Pracuji přehledně a systematicky, aby vše probíhalo hladce a vedlo k výsledku.",
+    "1_section": {
+      "header":"Setkání",
+      "capture":"Sejdeme se a ujasníme cíle a požadavky. Na základě toho navrhnu optimální řešení a přesný rozsah práce."
+    },
+    "2_section": {
+      "header":"Návrh",
+      "capture":"Připravím technický a UX/UI návrh — architekturu (databáze, API) a wireframy, aby bylo jasné, jak produkt bude fungovat a vypadat."
+    },
+    "3_section": {
+      "header":"Vývoj",
+      "capture":"Pracuji agilně v krátkých iteracích. Pravidelně Vám ukazuji výsledky a zapracovávám zpětnou vazbu."
+    },
+    "4_section": {
+      "header":"Spuštění",
+      "capture":"Zajistím nasazení do provozu, předám dokumentaci a poskytuji podporu po spuštění."
+    }
+  },
+  "footer": {
+    "copyright": "Osobní Portfolio",
+    "back_to_top": "Zpět nahoru",
+    "source_code": "Zdrojový kód stránky"
+  }
+}

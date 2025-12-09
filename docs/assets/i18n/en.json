@@ -1,0 +1,108 @@
+{
+  "header": {
+    "about_me": "About Me",
+    "projects_skills": "Projects & Skills",
+    "contact": "Contact",
+    "collaboration": "Collaboration"
+  },
+  "hero": {
+    "name": "JONÁŠ BUČINA",
+    "title": "SOFTWARE DEVELOPER",
+    "subtitle": "Fullstack Web & Desktop Specialist",
+    "capture": "I specialize in creating <strong>robust and scalable solutions</strong> across platforms. I have experience with <strong>fullstack web development</strong> (from database to modern UI) as well as designing and implementing <strong>high-performance desktop applications</strong> in C# and C/C++. My goal is always clean, sustainable, and optimized code."
+  },
+  "about_me": {
+    "header": "Who I Am & What I Do",
+    "paragraph_1": "I am a <strong>Fullstack software developer</strong> with a broad scope, combining a robust backend with a modern frontend. My stack includes both advanced web technologies (<strong>Angular, Laravel, JavaScript/TypeScript</strong>) and performance tools like <strong>Python, C# and C/C++</strong>.",
+    "paragraph_2": "I specialize in the <strong>design and implementation</strong> of efficient solutions, focusing on the principles of <strong>OOP (Object-Oriented Programming)</strong> and <strong>clean architecture</strong>. My goal is to deliver <strong>sustainable code</strong> that is reliable, well-tested, and easily extensible, even in complex environments (e.g., <span class='highlight'>microservices architecture</span>).",
+    "header_praxe": "Work Experience",
+    "htec": {
+      "year": "2025 – Present",
+      "name": "High Tech Engineering Center, a.s.",
+      "pos": "Software Engineer, Medical Solutions"
+    },
+    "rp": {
+      "year": "2022 – Present",
+      "name": "RegioPartner, s.r.o.",
+      "pos": "Expert, Full Stack Web Developer"
+    },
+    "viagem": {
+      "year": "2024 - 2024",
+      "name": "Viagem, a.s.",
+      "pos": "CRM Developer"
+    },
+    "naucseto": {
+      "year": "2023 - 2024",
+      "name": "NAUCSETO, s.r.o",
+      "pos": "Programming Circle Lecturer"
+    },
+    "download_label": "Download My Resume (PDF)"
+  },
+  "projects_skills": {
+    "header": "My Work and Technology Stack",
+    "capture": "Here's an overview of the technologies I work with and selected projects demonstrating my skills in fullstack development.",
+    "web_header": "Web Development",
+    "desktop_header": "Desktop & Backend",
+    "db_header": "Databases & Tools",
+    "selected_projects_header": "Selected Projects",
+    "web_app": {
+      "header": "Commercial Web Platform (CRM/ERP)",
+      "text": "A robust fullstack solution for a company, including a comprehensive Web Presentation, Client Section, and a powerful Administrative Backoffice (CRM/ERP). The system manages users, orders, and internal processes. This project showcases complex web development and design.",
+      "tech": "Tech: Angular, Laravel (API), MySQL, Bootstrap",
+      "button_label": "Visit Website"
+    },
+    "mc_app": {
+      "header": "CLI File Manager",
+      "text": "A desktop command-line interface (CLI) application in C# that replicates the functionality of a Midnight Commander/Norton Commander type file manager. Emphasis is placed on Object-Oriented Programming (OOP) principles, clean architecture, and efficient console interface management.",
+      "tech": "Tech: C#, .NET Framework, OOP, CLI/Console",
+      "button_label": "GitHub Repository"
+    },
+    "db_app": {
+      "header": "Console Database Tool (CLI)",
+      "text": "A console application written in C# / .NET that serves as a robust tool for full database management (PostgreSQL). It allows dynamic creation/modification of tables, data insertion, query execution, and complex database schema control directly from the command line.",
+      "tech": "Tech: C#, .NET, OOP, PostgreSQL, Console/CLI, Dapper (ORM)",
+      "button_label": "GitHub Repository"
+    }
+  },
+  "contact": {
+    "header": "Let's Connect",
+    "content": "Have a project you'd like to discuss, or just want to say hello? Don't hesitate to contact me.",
+    "form": {
+      "name_header": "Name",
+      "name_text": "Your Name",
+      "email_header": "Email",
+      "email_text": "your@email.com",
+      "topic_header": "Subject (optional)",
+      "topic_text": "Message topic",
+      "message_header": "Your Message",
+      "message_text": "Describe your project or inquiry."
+    },
+    "button_label": "Send Message",
+    "location": "Or find me directly at:"
+  },
+  "collaboration": {
+    "header": "Collaboration Process",
+    "content": "I am your single partner for the entire project. I work clearly and systematically to ensure everything goes smoothly and leads to results.",
+    "1_section": {
+      "header": "Meeting",
+      "capture": "We'll meet to clarify goals and requirements. Based on this, I will propose the optimal solution and the exact scope of work."
+    },
+    "2_section": {
+      "header": "Design",
+      "capture": "I will prepare the technical and UX/UI design — architecture (database, API) and wireframes, making it clear how the product will function and look."
+    },
+    "3_section": {
+      "header": "Development",
+      "capture": "I work agilely in short iterations. I regularly show you the results and incorporate feedback."
+    },
+    "4_section": {
+      "header": "Launch",
+      "capture": "I will ensure deployment, provide documentation, and offer post-launch support."
+    }
+  },
+  "footer": {
+    "copyright": "Personal Portfolio",
+    "back_to_top": "Back to Top",
+    "source_code": "Page Source Code"
+  }
+}
