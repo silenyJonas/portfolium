@@ -5,6 +5,7 @@
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
     padding: 80px 20px; 
+    z-index: 21;
 }
 
 /* Centrování obsahu */

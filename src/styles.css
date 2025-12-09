@@ -89,7 +89,6 @@ section {
     box-sizing: border-box; 
     padding: 60px 20px;
     position: relative;
-    z-index: 20; 
     margin-bottom: -40px;
 }
 
