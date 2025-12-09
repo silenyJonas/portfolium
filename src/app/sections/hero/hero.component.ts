@@ -45,10 +45,8 @@ export class HeroComponent implements OnInit, OnDestroy {
   // Nová metoda pro nastavení pozadí
   private setBackgroundImage(): void {
     // 1. Definujte požadovaný styl pozadí
-    const backgroundValue = "linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/assets/images/backgrounds/background.jpg')";
+   const backgroundValue = "linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/images/backgrounds/background.jpg')";
 
-    // 2. Najděte element s třídou .hero-section
-    // querySelectorAll vrátí NodeList, potřebujeme první element
     const heroSectionElement = this.el.nativeElement.querySelector('.hero-section');
 
     if (heroSectionElement) {
