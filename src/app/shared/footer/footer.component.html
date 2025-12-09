@@ -1,13 +1,16 @@
 <footer id="footer">
   <div class="footer-content-wrapper">
-    <p class="copyright">&copy; 2025 Jonáš Bučina | Software Developer</p>
+
+    <p class="copyright" [innerHTML]="copyright"></p>
     
     <nav class="footer-nav">
       <a href="https://github.com/silenyJonas/portfolium" target="_blank" class="footer-link source-code-link">
-        <img src="assets/images/icons/github.png" alt="GitHub Logo" class="github-icon"> Zdrojový Kód Stránky
+        <img src="assets/images/icons/github.png" alt="GitHub Logo" class="github-icon">
+        <span [innerHTML]="source_code"></span>
       </a>
       <span class="separator">|</span>
-      <a href="#about-me" class="footer-link back-to-top">Zpět na začátek</a>
+      <a href="#about-me" class="footer-link back-to-top" [innerHTML]="back_to_top"></a>
     </nav>
+
   </div>
 </footer>

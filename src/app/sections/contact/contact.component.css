@@ -161,3 +161,32 @@
         gap: 0;
     }
 }
+.msg {
+  margin-top: 12px;
+  font-size: 14px;
+  padding: 10px 14px;
+  border-radius: 6px;
+  animation: fadeIn 0.3s ease;
+}
+
+.msg.success {
+  background: #d1fae5;
+  color: #065f46;
+  border: 1px solid #10b981;
+}
+
+.msg.error {
+  background: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #ef4444;
+}
+
+.submit-button[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}

@@ -1,6 +1,6 @@
 /* Globální styly sekce */
 section {
-    background-color: rgb(30, 30, 30); /* Tmavé pozadí */
+    background-color: rgb(30, 30, 30);
     border-radius: 40px;
     z-index: 22; 
     padding-top: 60px; 
@@ -32,7 +32,7 @@ section {
     display: block;
     width: 70px; 
     height: 4px;
-    background-color: #6c5ce7; /* Akcentní barva (Fialová) */
+    background-color: #6c5ce7;
     margin: 15px auto 0;
     border-radius: 2px;
 }
@@ -48,7 +48,7 @@ section {
 /* Zvýraznění klíčových slov */
 .highlight {
     font-weight: bold;
-    color: #a29bfe; /* Světlejší fialová akcentní barva pro text */
+    color: #a29bfe;
 }
 
 /* Styl pro závěrečný, zdůrazněný odstavec (pokud by byl použit) */
@@ -72,36 +72,35 @@ section {
 .cv-download-link {
     display: inline-flex;
     align-items: center;
-    padding: 8px 15px; /* Menší padding */
-    margin-top: 40px; /* Větší mezera po timeline */
+    padding: 8px 15px;
+    margin-top: 40px;
     
-    /* Vzhled: Nyní jen text s akcentem */
-    background-color: transparent; /* Průhledné pozadí */
-    color: #a29bfe; /* Akcentní barva pro text */
+    background-color: transparent;
+    color: #a29bfe;
     text-decoration: none;
-    border: 1px solid #6c5ce7; /* Tenký rámeček pro definici */
+    border: 1px solid #6c5ce7;
     border-radius: 6px; 
-    font-weight: 500; /* Lehčí font */
+    font-weight: 500;
     font-size: 1rem;
-    transition: all 0.3s ease; /* Plynulejší přechod */
-    box-shadow: none; /* Odstraněn stín */
+    transition: all 0.3s ease;
+    box-shadow: none;
 }
 
 .cv-download-link i {
-    margin-right: 8px; /* Menší mezera */
+    margin-right: 8px;
     font-size: 1rem;
-    color: #6c5ce7; /* Ikona akcentní barvou */
+    color: #6c5ce7;
 }
 
 .cv-download-link:hover {
-    background-color: #6c5ce7; /* Při najetí se pozadí vyplní */
-    color: #ffffff; /* Text zbělá */
-    transform: none; /* Odstraněn posun */
-    box-shadow: 0 4px 10px rgba(108, 92, 231, 0.2); /* Jemný stín při najetí */
+    background-color: #6c5ce7;
+    color: #ffffff;
+    transform: none;
+    box-shadow: 0 4px 10px rgba(108, 92, 231, 0.2);
 }
 
 .cv-download-link:hover i {
-    color: #ffffff; /* Ikona zbělá */
+    color: #ffffff;
 }
 
 /* Nadpis pro sekci praxe */
@@ -129,7 +128,7 @@ section {
     position: relative;
 }
 
-/* Vizuální linka časové osy - Nyní je přesně uprostřed UL */
+/* Vizuální linka časové osy */
 .experience-timeline::before {
     content: '';
     position: absolute;
@@ -149,7 +148,7 @@ section {
     clear: both; 
 }
 
-/* Tečka/ikona na ose - Nyní je uprostřed */
+/* Tečka/ikona na ose */
 .timeline-dot {
     position: absolute;
     left: 50%; 
@@ -215,39 +214,68 @@ section {
     color: #b0b0b0;
 }
 
+/* === DOPLNĚNÁ RESPONZIVITA PRO VĚTŠÍ ZAŘÍZENÍ === */
 
-/* --- RESPONZIVITA PRO CENTROVANOU OSU --- */
+@media (max-width: 1200px) {
+    .timeline-content {
+        /* Zvětšení prostoru pro text na větších noteboocích a menších desktopech */
+        width: 47%; 
+    }
+}
+
+@media (max-width: 1024px) {
+    .timeline-content {
+        /* Mírné zvětšení prostoru a zmenšení posunu pro tablety/menší laptopy */
+        width: 48%; 
+        padding: 8px;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-content {
+        transform: translateX(-15px); 
+    }
+    .timeline-item:nth-child(even) .timeline-content {
+        transform: translateX(15px); 
+    }
+}
+
+
+/* --- RESPONZIVITA PRO CENTROVANOU OSU (MOBILY A MALÉ TABLETY) --- */
 @media (max-width: 800px) {
     /* Na menších obrazovkách se vracíme k levému zarovnání pro lepší čitelnost */
     .working-status-wrapper {
         max-width: 100%;
     }
     .experience-timeline::before {
+        /* Přesun vizuální osy zcela doleva (s odsazením) */
         left: 15px; 
         transform: translateX(0);
     }
     
     .timeline-item {
+        /* Posunutí položek doprava, aby nezasahovaly do osy */
         padding-left: 50px; 
         padding-right: 0;
     }
     
     .timeline-dot {
-        left: 0;
-        transform: translateX(0);
+        /* Přesunutí tečky k levé ose */
+        left: 15px;
+        transform: translateX(-50%);
     }
     
     .timeline-content {
+        /* Obsah zabírá celou šířku kontejneru */
         width: auto; 
         float: none !important; 
         text-align: left !important;
         transform: translateX(0) !important;
     }
 
-    /* Zrušení všech float stylů pro responzivitu */
+    /* Zrušení všech float a transform stylů pro responzivitu */
     .timeline-item:nth-child(odd) .timeline-content,
     .timeline-item:nth-child(even) .timeline-content {
         float: none !important;
         text-align: left !important;
+        transform: translateX(0) !important;
     }
 }

@@ -7,7 +7,7 @@
   },
   "hero": {
     "name": "JONÁŠ BUČINA",
-    "title": "SOFTWARE DEVELOPER",
+    "title": "SOFTWARE VÝVOJÁŘ",
     "subtitle": "Fullstack Web & Desktop Specialista",
     "capture": "Specializuji se na tvorbu <strong>robustních a škálovatelných řešení</strong> napříč platformami. Mám zkušenosti s <strong>fullstack webovým vývojem</strong> (od databáze po moderní UI) i s návrhem a implementací <strong>výkonných desktopových aplikací</strong> v C# a C/C++. Mým cílem je vždy čistý, udržitelný a optimalizovaný kód."
   },
@@ -65,15 +65,44 @@
     }
   },
   "contact": {
-    "header": "Kontakt",
-    "content": "Nejlepší způsob, jak mě kontaktovat, je přes e-mail. Zde bude kontaktní formulář (např. s jednoduchými poli: Jméno, E-mail, Zpráva)."
+    "header": "Pojďme se spojit",
+    "content": "Máte projekt, o kterém byste rádi diskutovali, nebo jen chcete pozdravit? Neváhejte mě kontaktovat.",
+    "form":{
+      "name_header":"Jméno",
+      "name_text":"Vaše jméno",
+      "email_header":"Email",
+      "email_text":"vas@email.cz",
+      "topic_header":"Předmět (nepovinné)",
+      "topic_text":"Téma zprávy",
+      "message_header":"Vaše zpráva",
+      "message_text":"Popište Váš projekt nebo dotaz."
+    },
+    "button_label": "Odeslat Zprávu",
+    "location": "Nebo mě najdete přímo na:"
   },
   "collaboration": {
-    "header": "Spolupráce (Collaboration)",
-    "content": "Jsem otevřený novým projektům a pozicím jako Angular developer. Kontaktujte mě s vaší nabídkou!"
+    "header": "Spolupráce",
+    "content": "Jsem Váš jediný partner pro celý projekt. Pracuji přehledně a systematicky, aby vše probíhalo hladce a vedlo k výsledku.",
+    "1_section": {
+      "header":"Setkání",
+      "capture":"Sejdeme se a ujasníme cíle a požadavky. Na základě toho navrhnu optimální řešení a přesný rozsah práce."
+    },
+    "2_section": {
+      "header":"Návrh",
+      "capture":"Připravím technický a UX/UI návrh — architekturu (databáze, API) a wireframy, aby bylo jasné, jak produkt bude fungovat a vypadat."
+    },
+    "3_section": {
+      "header":"Vývoj",
+      "capture":"Pracuji agilně v krátkých iteracích. Pravidelně Vám ukazuji výsledky a zapracovávám zpětnou vazbu."
+    },
+    "4_section": {
+      "header":"Spuštění",
+      "capture":"Zajistím nasazení do provozu, předám dokumentaci a poskytuji podporu po spuštění."
+    }
   },
   "footer": {
     "copyright": "Osobní Portfolio",
-    "back_to_top": "Zpět nahoru"
+    "back_to_top": "Zpět nahoru",
+    "source_code": "Zdrojový kód stránky"
   }
 }

@@ -124,27 +124,75 @@
     color: #d0d0d0;
 }
 
-/* Media Query pro mobilní zobrazení: Vše zarovnat doleva */
+/* === DOPLNĚNÁ RESPONZIVITA === */
+
+/* Pro velké laptopy a monitory (nad 1000px) */
+@media (min-width: 1000px) {
+    .content-wrapper {
+        max-width: 1200px;
+    }
+}
+
+/* Pro střední laptopy a velké tablety (992px) */
+@media (max-width: 992px) {
+    .section-title {
+        font-size: 2.5rem;
+    }
+    .step-content {
+        /* Dáme obsahu více místa, protože je menší obrazovka */
+        max-width: 450px; 
+    }
+}
+
+/* Pro tablety a menší laptopy (max-width: 800px) */
+@media (max-width: 800px) {
+    .section-intro {
+        margin-bottom: 40px;
+    }
+    .timeline-step {
+        margin-bottom: 45px;
+    }
+    .step-title {
+        font-size: 1.3rem;
+    }
+    .step-description {
+        font-size: 0.95rem;
+    }
+}
+
+/* Media Query pro mobilní zobrazení: Vše zarovnat doleva (max-width: 768px a níže) */
 @media (max-width: 768px) {
+    .collaboration-section {
+        padding: 60px 0;
+    }
+    .section-title {
+        font-size: 2.2rem;
+    }
+    
+    /* Vizuální linka se přesune vlevo */
     .collaboration-timeline::before {
-        left: 20px;
-        transform: none;
+        display: none;
     }
     
     .timeline-step {
+        /* Zajistí, že všechny kroky jdou zleva doprava */
         flex-direction: row !important;
         margin-left: 20px;
+        padding: 0; /* Odebrání horizontálního paddingu */
     }
     
+    /* Přesun čísla kroku na osu */
     .step-number {
         position: absolute;
-        left: 20px;
+        left: 5px;
         margin: 0;
         transform: translateX(-50%);
     }
     
+    /* Obsah se posune doprava za číslo kroku */
     .step-content {
-        margin-left: 45px;
+        margin-left: 50px; /* Větší mezera od čísla */
         max-width: 100%;
+        padding: 15px;
     }
 }

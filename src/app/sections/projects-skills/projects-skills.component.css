@@ -73,7 +73,7 @@ a {
 .skills-container-with-dividers {
     display: flex;
     justify-content: space-between;
-    align-items: stretch; /* Klíčové pro správnou výšku čar */
+    align-items: stretch;
     flex-wrap: wrap; 
     margin-bottom: 50px;
 }
@@ -94,7 +94,7 @@ a {
         rgba(108, 92, 231, 0.8) 50%, 
         rgba(108, 92, 231, 0) 100% 
     );
-    margin: 20px 20px; /* Odsazení od obsahu sloupců */
+    margin: 20px 20px;
 }
 
 .tech-icons-grid {
@@ -110,14 +110,14 @@ a {
     align-items: center;
     justify-content: center;
     padding: 15px 5px;
-    background-color: #22222a; /* Tmavé pozadí pro lepší čitelnost na tmavém pozadí sekce */
+    background-color: #22222a;
     border-radius: 8px;
     transition: background-color 0.3s, transform 0.3s;
     font-size: 0.95rem;
     font-weight: 500;
     color: #d0d0d0;
     height: 100px; 
-    border: 1px solid #333333; /* Jemný rámeček */
+    border: 1px solid #333333;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
@@ -156,10 +156,9 @@ a {
     border: 1px solid rgba(108, 92, 231, 0.15); 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     
-    /* ZAROVNÁNÍ OBSAHU DOLŮ (NOVÉ STYLY) */
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Klíčové pro odtlačení .project-tech a .project-links dolů */
+    justify-content: space-between;
 }
 
 .project-title {
@@ -170,13 +169,12 @@ a {
     padding-bottom: 10px;
 }
 
-/* Využijeme flex-grow na popisu, aby zabral veškerý volný prostor */
 .project-description {
     font-size: 1rem;
     color: #d0d0d0;
     margin-bottom: 15px;
     line-height: 1.6;
-    flex-grow: 1; /* Tato vlastnost zajistí, že popis se roztáhne a odtlačí spodní prvky */
+    flex-grow: 1; 
 }
 
 .project-tech {
@@ -184,7 +182,6 @@ a {
     font-style: italic;
     color: #6c5ce7; 
     margin-bottom: 25px;
-    /* Dříve tam byla mezera, která se teď řeší flexboxem */
 }
 
 .project-links {
@@ -223,19 +220,26 @@ a {
     background-color: #444;
 }
 
-/* Pro projekty jen s jedním odkazem */
 .full-width {
     flex-grow: 1; 
     text-align: center;
 }
 
-/* --- RESPONZIVITA --- */
+/* === RESPONZIVITA === */
 
+/* Pro extra velké displeje (nad 1400px) - zvětšení max-width */
+@media (min-width: 1400px) {
+    .content-wrapper {
+        max-width: 1300px;
+    }
+}
+
+/* Pro střední laptopy (max-width: 1050px) - Zrušení dělicích čar */
 @media (max-width: 1050px) {
-    /* U menších obrazovek se zruší dělicí čáry */
+    /* Zarovnání sloupců na střed a odstranění čar */
     .skills-container-with-dividers {
-        justify-content: center;
-        gap: 30px; /* Znovu nastavíme gap */
+        justify-content: space-around; /* Místo space-between */
+        gap: 30px; 
     }
     
     .skills-divider {
@@ -243,13 +247,86 @@ a {
     }
 
     .skills-column {
+        /* Dáme jim více místa, aby se vešly dva vedle sebe pohodlně */
         flex-basis: 45%; 
+        min-width: 400px;
     }
 }
 
+/* Pro tablety a malé laptopy (max-width: 992px) */
+@media (max-width: 992px) {
+    .section-title {
+        font-size: 2.5rem;
+    }
+    .projects-grid {
+        gap: 30px;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+}
+
+/* Pro telefony a malé tablety (max-width: 768px) - Jeden sloupec pro dovednosti */
 @media (max-width: 768px) {
+    .section-title {
+        font-size: 2.2rem;
+        padding-top: 40px;
+    }
+    .section-intro {
+        margin-bottom: 40px;
+        font-size: 1.05rem;
+    }
+    
+    .skills-container-with-dividers {
+        flex-direction: column; /* Sloupce pod sebe */
+        gap: 0;
+    }
+    
     .skills-column {
         min-width: 100%;
         flex-basis: 100%;
+        padding: 15px 10px;
+    }
+    
+    /* Přidání horizontální dělicí čáry mezi sekcemi dovedností */
+    .skills-column:not(:last-child) {
+        border-bottom: 1px dashed rgba(108, 92, 231, 0.3);
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+    }
+
+    .projects-heading {
+        margin-top: 50px;
+        font-size: 1.8rem;
+    }
+}
+
+/* Pro mobilní telefony (max-width: 550px) - Dvě ikony vedle sebe, projekty zabírají celou šířku */
+@media (max-width: 550px) {
+    .section-title {
+        font-size: 1.8rem;
+        padding-top: 40px;
+    }
+    .tech-icons-grid {
+        /* Zachovat dvě ikony vedle sebe, ale s menším gapem */
+        gap: 10px;
+    }
+    .tech-item {
+        height: 90px;
+        padding: 10px 5px;
+        font-size: 0.85rem;
+    }
+
+    .projects-grid {
+        /* Zajistit, že projektové karty zabírají celou šířku */
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .project-card {
+        padding: 20px;
+    }
+
+    .project-links {
+        flex-direction: column; /* Tlačítka pod sebe */
+        gap: 10px;
     }
 }
