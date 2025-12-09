@@ -1,4 +1,13 @@
-<section id="hero" class="sticky-section hero-section">
+<section 
+  id="hero" 
+  class="sticky-section hero-section" 
+  
+  style="transition: visibility 0s, opacity 0.2s ease-out" 
+  
+  [style.opacity]="isHeroVisible ? 1 : 0" 
+  
+  [style.visibility]="isHeroVisible ? 'visible' : 'hidden'"
+>
   <div class="content-wrapper">
     <div class="text-content">
       <p class="hero-name" [innerHTML]="name"></p>
