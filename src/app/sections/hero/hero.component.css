@@ -1,7 +1,11 @@
 /* Základní styly pro sekci */
+/* hero.component.css */
+/* hero.component.css */
 .hero-section {
     
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/assets/images/backgrounds/background.jpg');
+    /* OPRAVA CESTY PRO BUILD: Vracíme se 4 úrovně zpět (ze src/app/sections/hero/ do rootu) */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../../../assets/images/backgrounds/background.jpg');
+    
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat;

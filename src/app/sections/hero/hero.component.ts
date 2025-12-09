@@ -4,6 +4,7 @@ import {
   OnInit, 
   OnDestroy,
   HostListener,
+  // ElementRef a ViewChild již nejsou potřeba, protože nemanipulujeme s DOM, ale se styly přes binding.
 } from '@angular/core';
 import { CommonModule } from '@angular/common'; 
 import { LocalizationService } from '../../services/localization.service'; 
@@ -20,6 +21,7 @@ import { takeUntil } from 'rxjs/operators';
 export class HeroComponent implements OnInit, OnDestroy {
   
   // Proměnná pro řízení viditelnosti a opacity v šabloně
+  // Bude vázána na [style.opacity] a [style.visibility] v HTML.
   isHeroVisible: boolean; 
 
   // Proměnné pro překlady
@@ -54,28 +56,30 @@ export class HeroComponent implements OnInit, OnDestroy {
   }
   
   ngOnDestroy() {
+      // Správné odhlášení z odběrů při zničení komponenty
       this.destroy$.next();
       this.destroy$.complete();
   }
 
   /**
    * Naslouchá události 'scroll' pro nastavení viditelnosti.
+   * Díky použití opacity/visibility se zabrání zacyklení, protože se nemění výška DOM.
    */
   @HostListener('window:scroll')
   onWindowScroll() {
     
+    // Výška okna, která odpovídá min-height: 100vh Hero sekce
     const heroHeight = window.innerHeight; 
     const scrollY = window.scrollY;
 
-    // Pokud je scroll pozice větší než celá výška Hero sekce + malá rezerva (např. 50px),
-    // nastavit isHeroVisible na false (pro skrytí/opacity 0).
+    // Pokud je scroll pozice větší než celá výška Hero sekce + malá rezerva (50px), skrýt.
     if (scrollY > heroHeight + 50) {
       // Nastavíme false jen, pokud už není false (pro optimalizaci Angular change detection)
       if (this.isHeroVisible !== false) {
         this.isHeroVisible = false; 
       }
     } else {
-      // Nastavíme true jen, pokud už není true
+      // Zobrazit, pokud se scroll nachází v horní části stránky.
       if (this.isHeroVisible !== true) {
         this.isHeroVisible = true;
       }
