@@ -100,7 +100,7 @@ section {
 /* Použijte třídu "sticky-section" na první sekci */
 .sticky-section {
     position: sticky;
-    z-index: 10; 
+    z-index: 1; 
     /* KLÍČOVÁ ZMĚNA: Definujeme, že se má přilepit k horní hraně kontejneru main */
     top: 0; 
     min-height: calc(100vh);
