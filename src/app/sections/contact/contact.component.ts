@@ -83,7 +83,6 @@ sendEmail(event: Event) {
   });
 }
 
-
   ngOnDestroy() {
     this.destroy$.next();
     this.destroy$.complete();

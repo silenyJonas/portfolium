@@ -73,7 +73,7 @@ export class HeroComponent implements OnInit, OnDestroy {
     const scrollY = window.scrollY;
 
     // Pokud je scroll pozice větší než celá výška Hero sekce + malá rezerva (50px), skrýt.
-    if (scrollY > heroHeight + 50) {
+    if (scrollY > heroHeight + 10) {
       // Nastavíme false jen, pokud už není false (pro optimalizaci Angular change detection)
       if (this.isHeroVisible !== false) {
         this.isHeroVisible = false; 

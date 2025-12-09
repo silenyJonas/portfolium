@@ -31,11 +31,10 @@
   </div>
 
   <nav class="mobile-menu" [class.open]="isMobileMenuOpen()" *ngIf="isMobileMenuOpen()">
-    <a href="#hero" (click)="closeMenu()">Domů</a>
-    <a href="#about-me" (click)="closeMenu()">O mně</a>
-    <a href="#projects-skills" (click)="closeMenu()">Projekty & Dovednosti</a>
-    <a href="#contact" (click)="closeMenu()">Kontakt</a>
-    <a href="#collaboration" (click)="closeMenu()">Spolupráce</a>
+    <a href="#about-me" (click)="closeMenu()">{{about_me}}</a>
+    <a href="#projects-skills" (click)="closeMenu()">{{projects_skills}}</a>
+    <a href="#collaboration" (click)="closeMenu()">{{collaboration}}</a>
+    <a href="#contact" (click)="closeMenu()">{{contact}}</a>
     
     <div class="language-switch mobile-only">
         <span [class.active]="!isEnglish()">CZ</span>
