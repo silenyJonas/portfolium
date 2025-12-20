@@ -1,59 +1,62 @@
-# PortfoliumJb
+# 🌐 Fullstack Software Developer Portfolio
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.12.
+Vítejte v mém profesním portfoliu. Jsem **Fullstack software developer** se zaměřením na vývoj robustních backendových systémů a moderních webových aplikací. Toto portfolio slouží jako přehled mé dosavadní praxe, technologického stacku a vybraných projektů.
 
-## Development server
+### 🚀 Živé demo portfolia:
+Osobní interaktivní stránku s kompletními informacemi naleznete zde:  
+🔗 [**https://silenyjonas.github.io/portfolium/**](https://silenyjonas.github.io/portfolium/)
 
-To start a local development server, run:
+---
 
-```bash
-ng serve
-```
+## 👨‍💻 O mně
+Specializuji se na **návrh a implementaci efektivních řešení** s důrazem na principy OOP a čistou architekturu. Mým cílem je dodávat udržitelný kód, který je spolehlivý a snadno rozšiřitelný i v komplexních prostředích (mikroslužby, enterprise systémy).
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+### Aktuální působení
+* **High Tech Engineering Center, a.s.** – Software Engineer, Medical Solutions (2025 – Nyní)
+* **RegioPartner, s.r.o.** – Expert Full Stack Web Developer (2022 – Nyní)
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 🛠️ Technologický Stack
 
-```bash
-ng generate component component-name
-```
+| Oblast | Technologie |
+| :--- | :--- |
+| **Webový vývoj** | Angular, Laravel (PHP), ASP.NET, JavaScript/TypeScript |
+| **Desktop & Backend** | C# / .NET, C++, C, Python |
+| **Databáze** | SQL / MySQL, PostgreSQL, SQLite |
+| **Nástroje** | Git, Docker, Dapper (ORM), CLI/Konzole |
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
+## 📁 Vybrané Projekty
 
-## Building
+### 🏛️ Komerční Webová Platforma (CRM/ERP)
+Robustní fullstack řešení zahrnující klientskou sekci a administrativní backoffice pro správu uživatelů a interních procesů.
+* **Tech:** Angular, Laravel (API), MySQL, Bootstrap.
 
-To build the project run:
+### 💻 Souborový Manažer pro CLI
+Desktopová aplikace pro příkazovou řádku v C#, která replikuje funkcionalitu **Midnight Commander**. Zaměřeno na hluboké využití OOP a správu konzolového rozhraní.
+* **Tech:** C#, .NET Framework, OOP, CLI.
 
-```bash
-ng build
-```
+### 📊 Konzolový Databázový Nástroj
+Nástroj pro plnou správu PostgreSQL databází přímo z příkazové řádky. Podporuje dynamickou tvorbu schémat a komplexní SQL dotazy.
+* **Tech:** C#, .NET, PostgreSQL, Dapper.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+---
 
-## Running unit tests
+## 🤝 Spolupráce
+Můj workflow je založen na transparentnosti a agilním přístupu:
+1.  **Setkání & Analýza** (definice cílů)
+2.  **Technický Návrh** (architektura databází a API)
+3.  **Agilní Vývoj** (krátké iterace se zpětnou vazbou)
+4.  **Nasazení & Podpora** (předání dokumentace a provoz)
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+---
 
-```bash
-ng test
-```
+## ✉️ Kontakt
+Máte zájem o spolupráci nebo technickou konzultaci?
+- **Email:** [jonasbucina@rpsw.cz](mailto:jonasbucina@rpsw.cz)
+- **LinkedIn:** [Profil na LinkedIn](#)
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+---
+*Vytvořeno jako osobní vizitka vývojáře | 2025*
