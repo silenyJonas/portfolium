@@ -33,14 +33,17 @@ Specializuji se na **návrh a implementaci efektivních řešení** s důrazem n
 ### 🏛️ Komerční Webová Platforma (CRM/ERP)
 Robustní fullstack řešení zahrnující klientskou sekci a administrativní backoffice pro správu uživatelů a interních procesů.
 * **Tech:** Angular, Laravel (API), MySQL, Bootstrap.
+* www.rpsw.cz
 
 ### 💻 Souborový Manažer pro CLI
 Desktopová aplikace pro příkazovou řádku v C#, která replikuje funkcionalitu **Midnight Commander**. Zaměřeno na hluboké využití OOP a správu konzolového rozhraní.
 * **Tech:** C#, .NET Framework, OOP, CLI.
+* https://github.com/silenyJonas/file_manager
 
 ### 📊 Konzolový Databázový Nástroj
 Nástroj pro plnou správu PostgreSQL databází přímo z příkazové řádky. Podporuje dynamickou tvorbu schémat a komplexní SQL dotazy.
 * **Tech:** C#, .NET, PostgreSQL, Dapper.
+* https://github.com/silenyJonas/database_api
 
 ---
 
