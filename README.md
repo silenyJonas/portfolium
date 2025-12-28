@@ -59,7 +59,7 @@ Můj workflow je založen na transparentnosti a agilním přístupu:
 ## ✉️ Kontakt
 Máte zájem o spolupráci nebo technickou konzultaci?
 - **Email:** [jonasbucina@rpsw.cz](mailto:jonasbucina@rpsw.cz)
-- **LinkedIn:** [Profil na LinkedIn](#)
+- **LinkedIn:** [https://www.linkedin.com/in/jon%C3%A1%C5%A1-bu%C4%8Dina-27a9a6382/]
 
 ---
 *Vytvořeno jako osobní vizitka vývojáře | 2025*
