@@ -1,7 +1,9 @@
 /* Místo pro globální styly Angular aplikace */
 
 /* 1. DEKLARACE FONTU POPPINS - Beze Změn */
-
+html {
+  scroll-behavior: smooth;
+}
 /* Regular (400) */
 @font-face {
     font-family: 'Poppins';
